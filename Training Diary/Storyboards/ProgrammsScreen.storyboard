@@ -1,7 +1,123 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4T-H2-GXi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Программы-->
+        <scene sceneID="dcg-cg-625">
+            <objects>
+                <viewController storyboardIdentifier="ProgrammsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4T-H2-GXi" customClass="ProgrammsVC" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Liv-lh-jBF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vz-45-0re">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Программы тренировок" leftItemsSupplementBackButton="YES" id="XMX-MT-7Od">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l9a-jC-T8X">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-rL-zRr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Clr-rW-oel">
+                                    <size key="itemSize" width="307" height="297"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="eSD-mT-vIn" customClass="CollectionViewCell" customModule="Training_Diary" customModuleProvider="target">
+                                        <rect key="frame" x="53.5" y="0.0" width="307" height="297"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HPd-gp-WS1">
+                                            <rect key="frame" x="0.0" y="0.0" width="307" height="297"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwo-Qc-c5b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="297"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlW-fO-P1i">
+                                                    <rect key="frame" x="5" y="5" width="297" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <color key="textColor" red="0.87668543781725883" green="0.87668543781725883" blue="0.87668543781725883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swq-a8-t79">
+                                                    <rect key="frame" x="270" y="276" width="32" height="16"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bwo-Qc-c5b" firstAttribute="top" secondItem="HPd-gp-WS1" secondAttribute="top" id="0Uh-Ou-3QH"/>
+                                                <constraint firstAttribute="bottom" secondItem="bwo-Qc-c5b" secondAttribute="bottom" id="6Zs-4J-Rca"/>
+                                                <constraint firstItem="TlW-fO-P1i" firstAttribute="top" secondItem="bwo-Qc-c5b" secondAttribute="top" constant="5" id="8Ra-LG-ucH"/>
+                                                <constraint firstItem="bwo-Qc-c5b" firstAttribute="bottom" secondItem="swq-a8-t79" secondAttribute="bottom" constant="5" id="EoX-de-htD"/>
+                                                <constraint firstItem="bwo-Qc-c5b" firstAttribute="trailing" secondItem="swq-a8-t79" secondAttribute="trailing" constant="5" id="Q6B-Z6-gjX"/>
+                                                <constraint firstAttribute="trailing" secondItem="bwo-Qc-c5b" secondAttribute="trailing" id="QtK-29-Guu"/>
+                                                <constraint firstItem="TlW-fO-P1i" firstAttribute="leading" secondItem="bwo-Qc-c5b" secondAttribute="leading" constant="5" id="gtg-DY-QKw"/>
+                                                <constraint firstItem="bwo-Qc-c5b" firstAttribute="trailing" secondItem="TlW-fO-P1i" secondAttribute="trailing" constant="5" id="hVM-Aa-3jE"/>
+                                                <constraint firstItem="bwo-Qc-c5b" firstAttribute="leading" secondItem="HPd-gp-WS1" secondAttribute="leading" id="y22-1q-RrV"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="307" height="297"/>
+                                        <connections>
+                                            <outlet property="bottomTitleLabel" destination="swq-a8-t79" id="j4a-Zp-ieg"/>
+                                            <outlet property="imageView" destination="bwo-Qc-c5b" id="8nh-mk-mGM"/>
+                                            <outlet property="topTitleLabel" destination="TlW-fO-P1i" id="c8c-Kq-kUs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fhk-YW-G2M"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xwp-rL-zRr" firstAttribute="trailing" secondItem="Fhk-YW-G2M" secondAttribute="trailing" id="6qz-99-K9i"/>
+                            <constraint firstItem="0Vz-45-0re" firstAttribute="trailing" secondItem="Fhk-YW-G2M" secondAttribute="trailing" id="JQu-vL-L2E"/>
+                            <constraint firstItem="xwp-rL-zRr" firstAttribute="leading" secondItem="Fhk-YW-G2M" secondAttribute="leading" id="Wan-5c-6Zl"/>
+                            <constraint firstItem="xwp-rL-zRr" firstAttribute="top" secondItem="0Vz-45-0re" secondAttribute="bottom" id="cL9-Z7-PTv"/>
+                            <constraint firstItem="0Vz-45-0re" firstAttribute="leading" secondItem="Fhk-YW-G2M" secondAttribute="leading" id="hHv-N3-HwZ"/>
+                            <constraint firstAttribute="bottom" secondItem="xwp-rL-zRr" secondAttribute="bottom" id="lZc-V4-IHk"/>
+                            <constraint firstItem="0Vz-45-0re" firstAttribute="top" secondItem="Fhk-YW-G2M" secondAttribute="top" id="ygK-T3-APY"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Программы" image="pencil" catalog="system" id="0rz-hm-Vwt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionImageView" destination="xwp-rL-zRr" id="dF1-Uq-2K6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKJ-fV-yab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918.84057971014499" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

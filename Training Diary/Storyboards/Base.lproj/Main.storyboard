@@ -4,31 +4,238 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Упражнения-->
+        <!--Главная-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сегодня" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glj-jA-Wcp">
+                                <rect key="frame" x="40" y="44" width="90" height="36.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y2a-kJ-t26">
+                                <rect key="frame" x="324" y="45" width="24" height="34"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mmT-2r-LG4">
+                                <rect key="frame" x="368" y="51" width="24" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2D-6D-fDk">
+                                <rect key="frame" x="334" y="718.5" width="60" height="54.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapAddExerciseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HZ-qa-rNM"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYc-1k-pn0">
+                                <rect key="frame" x="344" y="652.5" width="40" height="36"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="gyroscope" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapListOfExercisesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcD-x0-CJZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-tW-jTZ">
+                                <rect key="frame" x="344" y="606" width="40" height="36.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="" image="list.bullet.rectangle" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapFromProgrammsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnc-oj-l0v"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-2Q-mrm">
+                                <rect key="frame" x="344" y="559.5" width="40" height="36.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="" image="calendar.circle" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapFromAnotherDayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpp-lB-Um3"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIK-fh-9iq">
+                                <rect key="frame" x="221.5" y="564" width="112.5" height="28"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Из другого дня">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" tailIndent="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmK-6Y-z8U">
+                                <rect key="frame" x="224" y="610" width="110" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Из программы">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" tailIndent="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U5-Hv-uAI">
+                                <rect key="frame" x="167.5" y="656.5" width="166.5" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Из списка упражнений">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="10" tailIndent="1" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a8F-qV-Jko">
+                                <rect key="frame" x="280" y="42.5" width="24" height="37.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZZI-2Q-mrm" firstAttribute="leading" secondItem="eIK-fh-9iq" secondAttribute="trailing" constant="10" id="0PV-Yo-Fvf"/>
+                            <constraint firstItem="y2D-6D-fDk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0669643" id="1Gu-Ie-VFM"/>
+                            <constraint firstItem="a8F-qV-Jko" firstAttribute="width" secondItem="glj-jA-Wcp" secondAttribute="width" multiplier="0.266667" id="4J0-T1-3vv"/>
+                            <constraint firstItem="bYc-1k-pn0" firstAttribute="top" secondItem="Rfc-tW-jTZ" secondAttribute="bottom" constant="10" id="6ye-Vv-Dd4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y2D-6D-fDk" secondAttribute="trailing" constant="20" id="8GO-OH-pKk"/>
+                            <constraint firstItem="glj-jA-Wcp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="9Du-bk-lhr"/>
+                            <constraint firstItem="mmT-2r-LG4" firstAttribute="width" secondItem="Y2a-kJ-t26" secondAttribute="width" id="BRX-YB-Xea"/>
+                            <constraint firstItem="mmT-2r-LG4" firstAttribute="leading" secondItem="Y2a-kJ-t26" secondAttribute="trailing" constant="20" id="CM9-d0-ppK"/>
+                            <constraint firstItem="6U5-Hv-uAI" firstAttribute="height" secondItem="bYc-1k-pn0" secondAttribute="height" multiplier="0.775" id="Cad-AK-eXo"/>
+                            <constraint firstItem="bYc-1k-pn0" firstAttribute="centerX" secondItem="y2D-6D-fDk" secondAttribute="centerX" id="F4L-gh-yuj"/>
+                            <constraint firstItem="tmK-6Y-z8U" firstAttribute="height" secondItem="Rfc-tW-jTZ" secondAttribute="height" multiplier="0.775" id="GJv-Mz-8TT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y2D-6D-fDk" secondAttribute="bottom" constant="40" id="JOG-eM-yHb"/>
+                            <constraint firstItem="ZZI-2Q-mrm" firstAttribute="centerX" secondItem="y2D-6D-fDk" secondAttribute="centerX" id="Jss-x1-UOc"/>
+                            <constraint firstItem="a8F-qV-Jko" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.057971" id="Lia-hh-UQJ"/>
+                            <constraint firstItem="bYc-1k-pn0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.0966184" id="Lj0-OV-Dbz"/>
+                            <constraint firstItem="bYc-1k-pn0" firstAttribute="leading" secondItem="6U5-Hv-uAI" secondAttribute="trailing" constant="10" id="LjA-du-JWz"/>
+                            <constraint firstItem="eIK-fh-9iq" firstAttribute="centerY" secondItem="ZZI-2Q-mrm" secondAttribute="centerY" id="NxB-ID-IxZ"/>
+                            <constraint firstItem="6U5-Hv-uAI" firstAttribute="centerY" secondItem="bYc-1k-pn0" secondAttribute="centerY" id="OPN-zw-sRa"/>
+                            <constraint firstItem="Y2a-kJ-t26" firstAttribute="top" secondItem="glj-jA-Wcp" secondAttribute="top" id="Opu-Gm-nfQ"/>
+                            <constraint firstItem="a8F-qV-Jko" firstAttribute="bottom" secondItem="glj-jA-Wcp" secondAttribute="bottom" id="S1T-Rt-Sa4"/>
+                            <constraint firstItem="mmT-2r-LG4" firstAttribute="top" secondItem="glj-jA-Wcp" secondAttribute="top" id="To4-zV-lF9"/>
+                            <constraint firstItem="Rfc-tW-jTZ" firstAttribute="leading" secondItem="tmK-6Y-z8U" secondAttribute="trailing" constant="10" id="TsC-BC-miQ"/>
+                            <constraint firstItem="eIK-fh-9iq" firstAttribute="height" secondItem="ZZI-2Q-mrm" secondAttribute="height" multiplier="0.775" id="Txt-6t-gYS"/>
+                            <constraint firstItem="a8F-qV-Jko" firstAttribute="leading" secondItem="glj-jA-Wcp" secondAttribute="trailing" constant="150" id="UeB-Or-MgK"/>
+                            <constraint firstItem="Y2a-kJ-t26" firstAttribute="bottom" secondItem="glj-jA-Wcp" secondAttribute="bottom" id="Ufm-QP-N3V"/>
+                            <constraint firstItem="y2D-6D-fDk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.144928" id="VLg-EE-FPc"/>
+                            <constraint firstItem="ZZI-2Q-mrm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.0966184" id="WK1-AJ-4dV"/>
+                            <constraint firstItem="tmK-6Y-z8U" firstAttribute="centerY" secondItem="Rfc-tW-jTZ" secondAttribute="centerY" id="XZr-FE-dMH"/>
+                            <constraint firstItem="a8F-qV-Jko" firstAttribute="top" secondItem="glj-jA-Wcp" secondAttribute="top" id="YkV-5P-y57"/>
+                            <constraint firstItem="Rfc-tW-jTZ" firstAttribute="centerX" secondItem="y2D-6D-fDk" secondAttribute="centerX" id="Z5h-7P-jW6"/>
+                            <constraint firstItem="y2D-6D-fDk" firstAttribute="top" secondItem="bYc-1k-pn0" secondAttribute="bottom" constant="30" id="aXP-Kw-5Ip"/>
+                            <constraint firstItem="ZZI-2Q-mrm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0446429" id="bP2-4e-RNj"/>
+                            <constraint firstItem="Y2a-kJ-t26" firstAttribute="leading" secondItem="a8F-qV-Jko" secondAttribute="trailing" constant="20" id="duE-lU-pPs"/>
+                            <constraint firstItem="bYc-1k-pn0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0446429" id="f4l-Jw-mLS"/>
+                            <constraint firstItem="Rfc-tW-jTZ" firstAttribute="top" secondItem="ZZI-2Q-mrm" secondAttribute="bottom" constant="10" id="fCi-wr-WFm"/>
+                            <constraint firstItem="glj-jA-Wcp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h6z-i8-XoC"/>
+                            <constraint firstItem="Y2a-kJ-t26" firstAttribute="height" secondItem="a8F-qV-Jko" secondAttribute="height" id="hY1-E7-jdq"/>
+                            <constraint firstItem="mmT-2r-LG4" firstAttribute="bottom" secondItem="glj-jA-Wcp" secondAttribute="bottom" id="ibB-gK-kQY"/>
+                            <constraint firstItem="glj-jA-Wcp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0446429" id="mgZ-xK-4ST"/>
+                            <constraint firstItem="Rfc-tW-jTZ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0446429" id="qac-a8-uwJ"/>
+                            <constraint firstItem="Y2a-kJ-t26" firstAttribute="width" secondItem="a8F-qV-Jko" secondAttribute="width" id="x34-bH-osJ"/>
+                            <constraint firstItem="Rfc-tW-jTZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.0966184" id="xVe-cO-dCu"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Упражнения" image="rosette" catalog="system" id="O31-er-K8s"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="rosette" catalog="system" id="O31-er-K8s"/>
+                    <connections>
+                        <outlet property="calendarImageView" destination="Y2a-kJ-t26" id="I2T-Hc-e2A"/>
+                        <outlet property="currentDateTitleLabel" destination="glj-jA-Wcp" id="W3x-Ki-9Cn"/>
+                        <outlet property="fromAnotherDayButton" destination="ZZI-2Q-mrm" id="QgG-Fh-bcP"/>
+                        <outlet property="fromAnotherDayTitleLabel" destination="eIK-fh-9iq" id="5D9-3L-JlK"/>
+                        <outlet property="fromExerciseListButton" destination="bYc-1k-pn0" id="3DC-4Z-A2Q"/>
+                        <outlet property="fromExerciseListTitleLabel" destination="6U5-Hv-uAI" id="T0G-28-n2c"/>
+                        <outlet property="fromProgrammsButton" destination="Rfc-tW-jTZ" id="A3b-FR-VHj"/>
+                        <outlet property="fromProgrammsTitleLabel" destination="tmK-6Y-z8U" id="Ia2-sd-1z9"/>
+                        <outlet property="listImageView" destination="mmT-2r-LG4" id="3XB-WH-9jE"/>
+                        <outlet property="timerImageView" destination="a8F-qV-Jko" id="JV6-vY-JF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713.04347826086962" y="92.410714285714278"/>
+            <point key="canvasLocation" x="521.73913043478262" y="782.8125"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ygv-dL-4TI">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="28o-Oc-eIG" customClass="MainTabBarController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A2D-8I-eeP">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="A2D-8I-eeP">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,14 +244,59 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lv4-iq-NVn"/>
+                        <segue destination="yK0-8V-hlC" kind="relationship" relationship="viewControllers" id="aHb-jM-NsY"/>
+                        <segue destination="xGs-1i-FM1" kind="relationship" relationship="viewControllers" id="I69-pm-hex"/>
+                        <segue destination="1YH-by-D91" kind="relationship" relationship="viewControllers" id="4hH-aP-G3m"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGl-Hp-hVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="92.410714285714278"/>
+            <point key="canvasLocation" x="-858" y="783"/>
+        </scene>
+        <!--ProgrammsScreen-->
+        <scene sceneID="6pP-BH-Red">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProgrammsScreen" id="yK0-8V-hlC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Programms" image="pencil" catalog="system" id="2cJ-7R-N4G"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvK-Lq-HXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="492"/>
+        </scene>
+        <!--UsefulScreen-->
+        <scene sceneID="nQG-X2-OKy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UsefulScreen" id="xGs-1i-FM1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Useful" image="playpause" catalog="system" id="lnq-Gg-uJB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZuW-fR-GFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-317" y="532"/>
+        </scene>
+        <!--SettingsScreen-->
+        <scene sceneID="gtK-GG-eCG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsScreen" id="1YH-by-D91" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="key" catalog="system" id="AYE-YC-ebs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUK-A0-h5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="570"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar.circle" catalog="system" width="128" height="121"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="gyroscope" catalog="system" width="128" height="121"/>
+        <image name="key" catalog="system" width="86" height="128"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="playpause" catalog="system" width="128" height="80"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
+        <image name="stopwatch" catalog="system" width="121" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

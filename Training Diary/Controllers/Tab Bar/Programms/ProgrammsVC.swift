@@ -9,21 +9,45 @@ import UIKit
 
 class ProgrammsVC: UIViewController {
 
+    @IBOutlet private weak var collectionImageView: UICollectionView!
+    var images: [UIImage] {
+        Array(0...9).compactMap { (UIImage(named: "item\($0)")) }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        collectionImageView.dataSource = self
+        collectionImageView.delegate = self
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ProgrammsVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        images.count
     }
-    */
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard var cell = collectionImageView.dequeueReusableCell(withReuseIdentifier: ProgrammsCollectionViewImage.cellIdentifier.rawValue,
+                                                                 for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+        cell.imageView.image = images[indexPath.row]
+        cell = CollectionViewTitles.toFillTitles(cell: cell, number: indexPath.row)
+        return cell
+    }
+}
 
+extension ProgrammsVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow: CGFloat = 2
+        let paddingWidth = 10 * (itemsPerRow + 1)
+        let availableWidth = collectionView.frame.width - paddingWidth
+        let widthPerItem = availableWidth / itemsPerRow
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
 }
