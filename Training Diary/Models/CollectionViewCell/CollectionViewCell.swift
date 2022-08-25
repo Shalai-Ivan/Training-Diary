@@ -2,13 +2,22 @@
 //  CollectionViewCell.swift
 //  Training Diary
 //
-//  Created by user on 22.08.2022.
+//  Created by MacMini on 23.08.22.
 //
 
 import UIKit
 
-final class CollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var topTitleLabel: UILabel!
-    @IBOutlet weak var bottomTitleLabel: UILabel!
+class CollectionViewCell: UITableViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }
