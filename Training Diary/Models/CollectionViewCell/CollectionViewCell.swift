@@ -7,17 +7,9 @@
 
 import UIKit
 
-class CollectionViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+class CollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageViewCell: UIImageView!
+    @IBOutlet weak var topTitleLabel: UILabel!
+    @IBOutlet weak var bottomTitleLabel: UILabel!
 }

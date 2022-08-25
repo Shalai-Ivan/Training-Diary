@@ -34,7 +34,7 @@ struct CollectionViewTitles {
             return ("", "", .darkGray)
         }
     }
-    static func toFillTitles(cell: CollectionViewCell, number: Int) -> CollectionViewCell {
+    static func toFillCells(cell: CollectionViewCell, number: Int) -> CollectionViewCell {
         cell.topTitleLabel.text = CollectionViewTitles().toSetTitlesValues(cell: number).0
         cell.bottomTitleLabel.text = CollectionViewTitles().toSetTitlesValues(cell: number).1
         cell.bottomTitleLabel.backgroundColor = CollectionViewTitles().toSetTitlesValues(cell: number).2

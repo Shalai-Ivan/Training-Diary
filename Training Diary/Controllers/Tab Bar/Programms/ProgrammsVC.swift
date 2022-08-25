@@ -29,8 +29,8 @@ extension ProgrammsVC: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard var cell = collectionImageView.dequeueReusableCell(withReuseIdentifier: ProgrammsCollectionViewImage.cellIdentifier.rawValue,
                                                                  for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
-        cell.imageView.image = images[indexPath.row]
-        cell = CollectionViewTitles.toFillTitles(cell: cell, number: indexPath.row)
+        cell.imageViewCell.image = images[indexPath.row]
+        cell = CollectionViewTitles.toFillCells(cell: cell, number: indexPath.row)
         return cell
     }
 }

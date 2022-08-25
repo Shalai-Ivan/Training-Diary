@@ -14,18 +14,58 @@
                     <view key="view" contentMode="scaleToFill" id="RPr-yh-FG9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleImage" id="dEe-Yt-zKO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JaI-PJ-zgL" customClass="UsefulTableView" customModule="Training_Diary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="oyS-eM-LuB">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oyS-eM-LuB" id="c1Q-rz-elx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uyn-gn-t4n" id="bDT-Qv-49M"/>
+                                    <outlet property="delegate" destination="uyn-gn-t4n" id="BVi-X9-dZb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0VD-PS-FEs"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JaI-PJ-zgL" firstAttribute="bottom" secondItem="0VD-PS-FEs" secondAttribute="bottom" id="5ik-cZ-FOz"/>
+                            <constraint firstItem="JaI-PJ-zgL" firstAttribute="top" secondItem="dEe-Yt-zKO" secondAttribute="bottom" id="LnD-Ob-459"/>
+                            <constraint firstItem="JaI-PJ-zgL" firstAttribute="trailing" secondItem="0VD-PS-FEs" secondAttribute="trailing" id="mHV-8t-wYG"/>
+                            <constraint firstItem="JaI-PJ-zgL" firstAttribute="leading" secondItem="0VD-PS-FEs" secondAttribute="leading" id="rqM-Q0-CQ6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Полезное" image="xmark.bin.circle" catalog="system" id="7bD-i9-FRc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="JaI-PJ-zgL" id="S1D-xd-hjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vji-CB-0Ys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="115"/>
+            <point key="canvasLocation" x="228.98550724637684" y="114.50892857142857"/>
         </scene>
     </scenes>
     <resources>
+        <image name="titleImage" width="800" height="450"/>
         <image name="xmark.bin.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

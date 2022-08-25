@@ -5,8 +5,16 @@
 //  Created by user on 23.08.2022.
 //
 
-import Foundation
+import UIKit
 
-enum UsefulTableViewCell: String {
+enum ForUsefulTableViewCell: String {
     case identifier = "tableViewCell"
+}
+
+enum UsefulTableViewCellTitles: String {
+    case zero = "  Упражнения"
+    case one = "  Статистика"
+    case two = "  Калькулятор"
+    case three = "  Замеры"
+    case four = "  Блокнот"
 }

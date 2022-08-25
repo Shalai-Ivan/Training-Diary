@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */; };
 		CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DD28AF94050052EEAD /* AppDelegate.swift */; };
 		CE4051E028AF94050052EEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DF28AF94050052EEAD /* SceneDelegate.swift */; };
 		CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E128AF94050052EEAD /* MainScreenViewController.swift */; };
 		CE4051E528AF94050052EEAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4051E328AF94050052EEAD /* Main.storyboard */; };
 		CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E628AF94050052EEAD /* Training_Diary.xcdatamodeld */; };
-		CE4051EA28AF94070052EEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4051E928AF94070052EEAD /* Assets.xcassets */; };
 		CE4051ED28AF94070052EEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4051EB28AF94070052EEAD /* LaunchScreen.storyboard */; };
 		CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520928AF9CE50052EEAD /* UsefulVC.swift */; };
 		CE40520D28AF9CF50052EEAD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520C28AF9CF50052EEAD /* SettingsVC.swift */; };
@@ -22,15 +22,18 @@
 		CE40521E28AFA4210052EEAD /* UsefulScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */; };
 		CE40522328AFA45B0052EEAD /* SettingsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE40522228AFA45B0052EEAD /* SettingsScreen.storyboard */; };
 		CE6A283328B392C200B5C3BD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283228B392C200B5C3BD /* UIViewExtensions.swift */; };
-		CE6A283928B39CB200B5C3BD /* CollectionViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283828B39CB200B5C3BD /* CollectionViewImage.swift */; };
-		CE6A283F28B39F8200B5C3BD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283E28B39F8200B5C3BD /* CollectionViewCell.swift */; };
+		CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */; };
+		CE8A484428B4E6BE00341176 /* UsefulTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A484328B4E6BE00341176 /* UsefulTableView.swift */; };
+		CE8A484828B4E81700341176 /* ForUsefulTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A484728B4E81700341176 /* ForUsefulTableViewCell.swift */; };
 		CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */; };
+		CEB6185B28B5016700EB7FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB6185A28B5016700EB7FAD /* Assets.xcassets */; };
 		E8CA2C9344C3EBA526FF5B64 /* Pods_Training_Diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F59E7BC7F3A44652C91AF14 /* Pods_Training_Diary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F59E7BC7F3A44652C91AF14 /* Pods_Training_Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Training_Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBC3501A9A7A723C270DDCB /* Pods-Training Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.debug.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.debug.xcconfig"; sourceTree = "<group>"; };
+		9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF5D1EE0CBB7993E2291F3F4 /* Pods-Training Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.release.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.release.xcconfig"; sourceTree = "<group>"; };
 		CE4051DA28AF94050052EEAD /* Training Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4051DD28AF94050052EEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +41,6 @@
 		CE4051E128AF94050052EEAD /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		CE4051E428AF94050052EEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE4051E728AF94050052EEAD /* Training_Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Training_Diary.xcdatamodel; sourceTree = "<group>"; };
-		CE4051E928AF94070052EEAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4051EC28AF94070052EEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4051EE28AF94070052EEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE40520928AF9CE50052EEAD /* UsefulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulVC.swift; sourceTree = "<group>"; };
@@ -49,9 +51,11 @@
 		CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsefulScreen.storyboard; sourceTree = "<group>"; };
 		CE40522228AFA45B0052EEAD /* SettingsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsScreen.storyboard; sourceTree = "<group>"; };
 		CE6A283228B392C200B5C3BD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		CE6A283828B39CB200B5C3BD /* CollectionViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewImage.swift; sourceTree = "<group>"; };
-		CE6A283E28B39F8200B5C3BD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForCollectionViewImage.swift; sourceTree = "<group>"; };
+		CE8A484328B4E6BE00341176 /* UsefulTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulTableView.swift; sourceTree = "<group>"; };
+		CE8A484728B4E81700341176 /* ForUsefulTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForUsefulTableViewCell.swift; sourceTree = "<group>"; };
 		CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTitles.swift; sourceTree = "<group>"; };
+		CEB6185A28B5016700EB7FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,13 @@
 				BF5D1EE0CBB7993E2291F3F4 /* Pods-Training Diary.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE3099E728B742840094BFF6 /* UsefulTableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UsefulTableView;
 			sourceTree = "<group>";
 		};
 		CE4051D128AF94050052EEAD = {
@@ -145,7 +156,7 @@
 		CE4051FA28AF954F0052EEAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE4051E928AF94070052EEAD /* Assets.xcassets */,
+				CEB6185A28B5016700EB7FAD /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,7 +232,8 @@
 		CE40521728AF9ED70052EEAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */,
+				CE8A483828B4DC0E00341176 /* Useful TableView */,
+				CE8A483728B4DC0500341176 /* CollectionView */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -241,6 +253,7 @@
 		CE6A283728B39C9400B5C3BD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE3099E728B742840094BFF6 /* UsefulTableView */,
 				CE8C2FF828B4C2EB00A1AA3E /* CollectionViewCell */,
 				CE6A283C28B39CBC00B5C3BD /* Enums */,
 			);
@@ -250,15 +263,32 @@
 		CE6A283C28B39CBC00B5C3BD /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				CE6A283828B39CB200B5C3BD /* CollectionViewImage.swift */,
+				CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */,
+				CE8A484728B4E81700341176 /* ForUsefulTableViewCell.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		CE8A483728B4DC0500341176 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CE8A483828B4DC0E00341176 /* Useful TableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A484328B4E6BE00341176 /* UsefulTableView.swift */,
+			);
+			path = "Useful TableView";
 			sourceTree = "<group>";
 		};
 		CE8C2FF828B4C2EB00A1AA3E /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				CE6A283E28B39F8200B5C3BD /* CollectionViewCell.swift */,
+				9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -325,8 +355,8 @@
 				CE4051ED28AF94070052EEAD /* LaunchScreen.storyboard in Resources */,
 				CE40522328AFA45B0052EEAD /* SettingsScreen.storyboard in Resources */,
 				CE40521B28AFA3C60052EEAD /* ProgrammsScreen.storyboard in Resources */,
-				CE4051EA28AF94070052EEAD /* Assets.xcassets in Resources */,
 				CE4051E528AF94050052EEAD /* Main.storyboard in Resources */,
+				CEB6185B28B5016700EB7FAD /* Assets.xcassets in Resources */,
 				CE40521E28AFA4210052EEAD /* UsefulScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */,
+				CE8A484428B4E6BE00341176 /* UsefulTableView.swift in Sources */,
 				CE40520F28AF9D080052EEAD /* ProgrammsVC.swift in Sources */,
 				CE40521328AF9DF10052EEAD /* MainTabBarController.swift in Sources */,
 				CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */,
@@ -388,10 +419,11 @@
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
 				CE6A283328B392C200B5C3BD /* UIViewExtensions.swift in Sources */,
-				CE6A283928B39CB200B5C3BD /* CollectionViewImage.swift in Sources */,
+				CE8A484828B4E81700341176 /* ForUsefulTableViewCell.swift in Sources */,
+				9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */,
+				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */,
 				CE40520D28AF9CF50052EEAD /* SettingsVC.swift in Sources */,
-				CE6A283F28B39F8200B5C3BD /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

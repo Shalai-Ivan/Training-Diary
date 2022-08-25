@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4T-H2-GXi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4T-H2-GXi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,12 +59,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swq-a8-t79">
-                                                    <rect key="frame" x="270" y="276" width="32" height="16"/>
+                                                    <rect key="frame" x="266.5" y="275" width="35.5" height="17"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
                                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -86,9 +87,9 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="307" height="297"/>
                                         <connections>
-                                            <outlet property="bottomTitleLabel" destination="swq-a8-t79" id="j4a-Zp-ieg"/>
-                                            <outlet property="imageView" destination="bwo-Qc-c5b" id="8nh-mk-mGM"/>
-                                            <outlet property="topTitleLabel" destination="TlW-fO-P1i" id="c8c-Kq-kUs"/>
+                                            <outlet property="bottomTitleLabel" destination="swq-a8-t79" id="ykv-3x-ApM"/>
+                                            <outlet property="imageViewCell" destination="bwo-Qc-c5b" id="LkC-9i-jP4"/>
+                                            <outlet property="topTitleLabel" destination="TlW-fO-P1i" id="R6n-ns-Gch"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
