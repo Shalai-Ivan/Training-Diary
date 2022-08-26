@@ -9,7 +9,7 @@ import UIKit
 
 class UsefulVC: UIViewController {
 
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var usefulTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,7 +20,7 @@ extension UsefulVC: UITableViewDataSource, UITableViewDelegate {
         return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: ForUsefulTableViewCell.identifier.rawValue,
+        var cell = tableView.dequeueReusableCell(withIdentifier: UsefulTableViewCellIdentifier.identifier.rawValue,
                                                  for: indexPath)
         cell = UsefulTableView.toFillCells(cell: cell, number: indexPath.row)
         return cell

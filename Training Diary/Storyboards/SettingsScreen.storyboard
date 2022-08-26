@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,11 +15,80 @@
                     <view key="view" contentMode="scaleToFill" id="WLY-9u-N1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-TB-d8o">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="ByH-8c-szW" customClass="SettingsTableViewCell" customModule="Training_Diary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="51.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ByH-8c-szW" id="UMk-Sk-CVp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byx-UG-TA7">
+                                                    <rect key="frame" x="20" y="11" width="325" height="29.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljt-4o-ewq">
+                                                    <rect key="frame" x="355" y="10" width="51" height="31.5"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="byx-UG-TA7" secondAttribute="bottom" id="1aO-YF-Mgw"/>
+                                                <constraint firstItem="byx-UG-TA7" firstAttribute="leading" secondItem="UMk-Sk-CVp" secondAttribute="leadingMargin" id="GWD-d6-hra"/>
+                                                <constraint firstItem="byx-UG-TA7" firstAttribute="top" secondItem="UMk-Sk-CVp" secondAttribute="topMargin" id="QAU-HS-L9P"/>
+                                                <constraint firstItem="ljt-4o-ewq" firstAttribute="leading" secondItem="byx-UG-TA7" secondAttribute="trailing" constant="10" id="byo-Wi-hWe"/>
+                                                <constraint firstAttribute="trailing" secondItem="ljt-4o-ewq" secondAttribute="trailing" constant="10" id="dSo-cs-zMw"/>
+                                                <constraint firstAttribute="bottom" secondItem="ljt-4o-ewq" secondAttribute="bottom" constant="10" id="juk-eb-tV9"/>
+                                                <constraint firstItem="ljt-4o-ewq" firstAttribute="top" secondItem="UMk-Sk-CVp" secondAttribute="top" constant="10" id="xmq-vq-3VX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="switchButton" destination="ljt-4o-ewq" id="2s1-QO-VJO"/>
+                                            <outlet property="titleLabel" destination="byx-UG-TA7" id="KvY-mY-oFv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i9X-GT-KNg" id="61c-n2-3n8"/>
+                                    <outlet property="delegate" destination="i9X-GT-KNg" id="UDx-Zj-u54"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-ke-TW8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Настройки" id="9mf-Na-UsW"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wSj-tY-Vwj"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kcx-TB-d8o" firstAttribute="leading" secondItem="wSj-tY-Vwj" secondAttribute="leading" id="3x3-7t-FZG"/>
+                            <constraint firstItem="wSj-tY-Vwj" firstAttribute="trailing" secondItem="kcx-TB-d8o" secondAttribute="trailing" id="8hl-Vx-1Yx"/>
+                            <constraint firstItem="PgB-ke-TW8" firstAttribute="leading" secondItem="WLY-9u-N1c" secondAttribute="leading" id="Jbi-bA-Ufw"/>
+                            <constraint firstItem="PgB-ke-TW8" firstAttribute="top" secondItem="wSj-tY-Vwj" secondAttribute="top" id="STF-x2-cJF"/>
+                            <constraint firstItem="wSj-tY-Vwj" firstAttribute="bottom" secondItem="kcx-TB-d8o" secondAttribute="bottom" id="Ukl-7c-sFb"/>
+                            <constraint firstItem="wSj-tY-Vwj" firstAttribute="trailing" secondItem="PgB-ke-TW8" secondAttribute="trailing" id="nLT-b0-4f0"/>
+                            <constraint firstItem="kcx-TB-d8o" firstAttribute="top" secondItem="PgB-ke-TW8" secondAttribute="bottom" id="p5O-mA-eAj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Настройки" image="person.2.circle" catalog="system" id="jQl-UQ-faM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="kcx-TB-d8o" id="xw0-xu-WdE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc0-BV-4Z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,5 +97,8 @@
     </scenes>
     <resources>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

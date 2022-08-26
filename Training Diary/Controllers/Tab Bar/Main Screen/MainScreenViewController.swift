@@ -12,12 +12,12 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var timerImageView: UIImageView!
     @IBOutlet private weak var calendarImageView: UIImageView!
     @IBOutlet private weak var listImageView: UIImageView!
-    @IBOutlet weak var fromAnotherDayTitleLabel: UILabel!
-    @IBOutlet weak var fromProgrammsTitleLabel: UILabel!
-    @IBOutlet weak var fromExerciseListTitleLabel: UILabel!
-    @IBOutlet weak var fromAnotherDayButton: UIButton!
-    @IBOutlet weak var fromProgrammsButton: UIButton!
-    @IBOutlet weak var fromExerciseListButton: UIButton!
+    @IBOutlet private weak var fromAnotherDayTitleLabel: UILabel!
+    @IBOutlet private weak var fromProgrammsTitleLabel: UILabel!
+    @IBOutlet private weak var fromExerciseListTitleLabel: UILabel!
+    @IBOutlet private weak var fromAnotherDayButton: UIButton!
+    @IBOutlet private weak var fromProgrammsButton: UIButton!
+    @IBOutlet private weak var fromExerciseListButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
