@@ -12,8 +12,6 @@
 		9A5704A428B7E8CB000947EE /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */; };
 		9A5704A728B7F476000947EE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */; };
 		9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */; };
-		CE10867428C07699001C7A84 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10867228C07699001C7A84 /* ExercisesViewModel.swift */; };
-		CE10867528C07699001C7A84 /* ExercisesViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10867328C07699001C7A84 /* ExercisesViewModelCell.swift */; };
 		CE3099EA28B757460094BFF6 /* ForSettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099E928B757460094BFF6 /* ForSettingsTableView.swift */; };
 		CE3099EE28B764510094BFF6 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099ED28B764510094BFF6 /* SettingsTableView.swift */; };
 		CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DD28AF94050052EEAD /* AppDelegate.swift */; };
@@ -34,6 +32,8 @@
 		CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */; };
 		CE410AAE28C07DCE00656BE1 /* ExercisesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE410AAD28C07DCD00656BE1 /* ExercisesList.storyboard */; };
 		CE410AB428C089B400656BE1 /* TableViewDataTransferType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410AB328C089B400656BE1 /* TableViewDataTransferType.swift */; };
+		CE410ABE28C0A89E00656BE1 /* ExercisesViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410ABC28C0A89E00656BE1 /* ExercisesViewModelCell.swift */; };
+		CE410ABF28C0A89E00656BE1 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410ABD28C0A89E00656BE1 /* ExercisesViewModel.swift */; };
 		CE56284F28BCBAB00044DA61 /* MuscleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE56284E28BCBAB00044DA61 /* MuscleList.storyboard */; };
 		CE56285528BCBB330044DA61 /* MusclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56285428BCBB330044DA61 /* MusclesViewController.swift */; };
 		CE56285C28BCBB870044DA61 /* MusclesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56285B28BCBB870044DA61 /* MusclesTableViewCell.swift */; };
@@ -60,8 +60,6 @@
 		9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BF5D1EE0CBB7993E2291F3F4 /* Pods-Training Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.release.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.release.xcconfig"; sourceTree = "<group>"; };
-		CE10867228C07699001C7A84 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExercisesViewModel.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Exercises 3/ExercisesViewModel.swift"; sourceTree = "<group>"; };
-		CE10867328C07699001C7A84 /* ExercisesViewModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExercisesViewModelCell.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Exercises 3/ExercisesViewModelCell.swift"; sourceTree = "<group>"; };
 		CE3099E928B757460094BFF6 /* ForSettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForSettingsTableView.swift; sourceTree = "<group>"; };
 		CE3099ED28B764510094BFF6 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
 		CE4051DA28AF94050052EEAD /* Training Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +82,8 @@
 		CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesViewModelType.swift; sourceTree = "<group>"; };
 		CE410AAD28C07DCD00656BE1 /* ExercisesList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExercisesList.storyboard; sourceTree = "<group>"; };
 		CE410AB328C089B400656BE1 /* TableViewDataTransferType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataTransferType.swift; sourceTree = "<group>"; };
+		CE410ABC28C0A89E00656BE1 /* ExercisesViewModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesViewModelCell.swift; sourceTree = "<group>"; };
+		CE410ABD28C0A89E00656BE1 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesViewModel.swift; sourceTree = "<group>"; };
 		CE56284E28BCBAB00044DA61 /* MuscleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MuscleList.storyboard; sourceTree = "<group>"; };
 		CE56285428BCBB330044DA61 /* MusclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewController.swift; sourceTree = "<group>"; };
 		CE56285B28BCBB870044DA61 /* MusclesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesTableViewCell.swift; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		CE10867128C07684001C7A84 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
-				CE10867228C07699001C7A84 /* ExercisesViewModel.swift */,
-				CE10867328C07699001C7A84 /* ExercisesViewModelCell.swift */,
+				CE410ABD28C0A89E00656BE1 /* ExercisesViewModel.swift */,
+				CE410ABC28C0A89E00656BE1 /* ExercisesViewModelCell.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -575,12 +575,13 @@
 				CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */,
 				CE8A484428B4E6BE00341176 /* UsefulTableView.swift in Sources */,
 				CE56287428BCCB460044DA61 /* TableViewViewModelType.swift in Sources */,
-				CE10867428C07699001C7A84 /* ExercisesViewModel.swift in Sources */,
 				CE56286B28BCC4D30044DA61 /* MusclesViewModel.swift in Sources */,
 				CE56286628BCC31F0044DA61 /* ForListMusclesTableView.swift in Sources */,
 				9A5704A728B7F476000947EE /* SettingsTableViewCell.swift in Sources */,
 				CE40520F28AF9D080052EEAD /* ProgrammsVC.swift in Sources */,
 				CE56285C28BCBB870044DA61 /* MusclesTableViewCell.swift in Sources */,
+				CE410ABE28C0A89E00656BE1 /* ExercisesViewModelCell.swift in Sources */,
+				CE410ABF28C0A89E00656BE1 /* ExercisesViewModel.swift in Sources */,
 				CE56287E28BCD9110044DA61 /* MusclesViewModelCell.swift in Sources */,
 				CE40521328AF9DF10052EEAD /* MainTabBarController.swift in Sources */,
 				CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */,
@@ -592,7 +593,6 @@
 				CE56285528BCBB330044DA61 /* MusclesViewController.swift in Sources */,
 				CE56287728BCD8120044DA61 /* TableViewCellViewModelType.swift in Sources */,
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
-				CE10867528C07699001C7A84 /* ExercisesViewModelCell.swift in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
 				CE6A283328B392C200B5C3BD /* UIViewExtensions.swift in Sources */,
 				CE8A484828B4E81700341176 /* ForUsefulTableView.swift in Sources */,
