@@ -51,11 +51,11 @@ struct SettingsTableView {
     static func toSetSectionTitle(section: Int) -> String {
         switch section {
         case 0:
-            return "Main"
+            return "Главное"
         case 1:
-            return "Interface"
+            return "Интерфейс"
         case 2:
-            return "Additionally"
+            return "Дополнительно"
         default:
             return ""
         }

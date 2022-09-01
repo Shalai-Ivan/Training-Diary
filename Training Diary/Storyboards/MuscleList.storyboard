@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XwJ-3u-H19">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Упражнения-->
+        <scene sceneID="jZ3-hk-O8Z">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ord-tt-0pw" customClass="MusclesViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njQ-Ha-an8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sp4-Ex-fow">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscleCell" id="jwH-fT-AiG" customClass="MusclesTableViewCell" customModule="Training_Diary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwH-fT-AiG" id="chf-9R-wRA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTw-gF-xWj">
+                                                    <rect key="frame" x="53" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5r0-Dr-57e">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="5r0-Dr-57e" secondAttribute="height" multiplier="1:1" id="9Ud-6Y-Nza"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-tu-ZJ8">
+                                                    <rect key="frame" x="371" y="0.0" width="43" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Gev-tu-ZJ8" secondAttribute="height" multiplier="1:1" id="EQX-Au-Nij"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="ellipsis.circle" catalog="system">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QTw-gF-xWj" firstAttribute="top" secondItem="chf-9R-wRA" secondAttribute="topMargin" id="71n-Z4-NzH"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gev-tu-ZJ8" secondAttribute="bottom" id="7rf-gM-3Lg"/>
+                                                <constraint firstItem="5r0-Dr-57e" firstAttribute="leading" secondItem="chf-9R-wRA" secondAttribute="leading" id="LfX-X7-mpw"/>
+                                                <constraint firstItem="Gev-tu-ZJ8" firstAttribute="top" secondItem="chf-9R-wRA" secondAttribute="top" id="Uw9-OT-mpy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QTw-gF-xWj" secondAttribute="bottom" id="dnx-cd-TOc"/>
+                                                <constraint firstItem="5r0-Dr-57e" firstAttribute="top" secondItem="chf-9R-wRA" secondAttribute="top" id="eRt-dB-xny"/>
+                                                <constraint firstAttribute="bottom" secondItem="5r0-Dr-57e" secondAttribute="bottom" id="eS4-Ty-dDC"/>
+                                                <constraint firstItem="QTw-gF-xWj" firstAttribute="leading" secondItem="5r0-Dr-57e" secondAttribute="trailing" constant="10" id="ksg-MT-IAS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gev-tu-ZJ8" secondAttribute="trailing" id="nbH-s3-KgX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="imageViewMuscle" destination="5r0-Dr-57e" id="gOj-fL-Y96"/>
+                                            <outlet property="titleLabelMuscle" destination="QTw-gF-xWj" id="Z43-h5-hMc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ord-tt-0pw" id="0bH-qh-AgJ"/>
+                                    <outlet property="delegate" destination="ord-tt-0pw" id="Krw-ow-PdD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CcP-bR-a0H"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sp4-Ex-fow" firstAttribute="leading" secondItem="CcP-bR-a0H" secondAttribute="leading" id="1Yr-LV-jOb"/>
+                            <constraint firstItem="CcP-bR-a0H" firstAttribute="trailing" secondItem="sp4-Ex-fow" secondAttribute="trailing" id="95n-Nl-as7"/>
+                            <constraint firstItem="sp4-Ex-fow" firstAttribute="top" secondItem="CcP-bR-a0H" secondAttribute="top" id="mLS-7h-67u"/>
+                            <constraint firstItem="CcP-bR-a0H" firstAttribute="bottom" secondItem="sp4-Ex-fow" secondAttribute="bottom" id="upw-rk-jOp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Упражнения" id="FKw-Oo-3eG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="kEX-Io-vn8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="3dL-z8-ygc" kind="unwind" unwindAction="unwindSegueBack:" id="zfJ-Hc-beM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="QUQ-3L-HXs" kind="show" identifier="ToExercisesList" id="Mun-w0-Aqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFN-eQ-mCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3dL-z8-ygc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2137.68115942029" y="-206.25"/>
+        </scene>
+        <!--ExercisesList-->
+        <scene sceneID="nmA-sE-28v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExercisesList" id="QUQ-3L-HXs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FG7-Ac-ZYd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4G-Bs-HfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2827" y="-206"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TLe-kz-DnX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="XwJ-3u-H19" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0D7-cl-cxK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ord-tt-0pw" kind="relationship" relationship="rootViewController" id="IU6-mb-AZ0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZCs-jD-Bwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227.536231884058" y="-206.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

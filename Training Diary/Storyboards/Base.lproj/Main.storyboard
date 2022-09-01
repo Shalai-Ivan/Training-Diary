@@ -58,7 +58,7 @@
                                 <rect key="frame" x="344" y="652.5" width="40" height="36"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="gyroscope" catalog="system">
+                                <state key="normal" image="dumbbell-5">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -68,6 +68,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapListOfExercisesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcD-x0-CJZ"/>
+                                    <segue destination="BUj-ug-Uua" kind="show" id="bXu-3u-uHI"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-tW-jTZ">
@@ -75,7 +76,7 @@
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="" image="list.bullet.rectangle" catalog="system"/>
+                                <state key="normal" title="" image="calendar"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -89,7 +90,7 @@
                                 <rect key="frame" x="344" y="559.5" width="40" height="36.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="" image="calendar.circle" catalog="system"/>
+                                <state key="normal" title="" image="calendar-2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -248,6 +249,16 @@
             </objects>
             <point key="canvasLocation" x="521.73913043478262" y="782.8125"/>
         </scene>
+        <!--MuscleList-->
+        <scene sceneID="8KK-zp-t0g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MuscleList" id="BUj-ug-Uua" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CX0-HZ-7cE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3j4-SD-DA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="790"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ygv-dL-4TI">
             <objects>
@@ -303,12 +314,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="16" height="16"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calendar.circle" catalog="system" width="128" height="121"/>
+        <image name="calendar-2" width="16" height="16"/>
+        <image name="dumbbell-5" width="16" height="16"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="gyroscope" catalog="system" width="128" height="121"/>
         <image name="key" catalog="system" width="86" height="128"/>
-        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="playpause" catalog="system" width="128" height="80"/>
         <image name="rosette" catalog="system" width="106" height="128"/>

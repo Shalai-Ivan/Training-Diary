@@ -40,9 +40,12 @@ class MainScreenViewController: UIViewController {
         }
     }
     @IBAction private func didTapListOfExercisesButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     @IBAction private func didTapFromProgrammsButton(_ sender: Any) {
     }
     @IBAction private func didTapFromAnotherDayButton(_ sender: Any) {
+    }
+    @IBAction func unwindSegueBack(_ sender: UIStoryboardSegue) {
     }
 }

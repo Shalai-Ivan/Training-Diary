@@ -1,15 +1,14 @@
 //
-//  SettingsTableViewCell.swift
+//  ChestViewModelCell.swift
 //  Training Diary
 //
-//  Created by MacMini on 25.08.22.
+//  Created by user on 30.08.2022.
 //
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var switchButton: UISwitch!
+class ChestViewModelCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

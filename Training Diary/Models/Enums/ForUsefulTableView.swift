@@ -19,7 +19,7 @@ enum UsefulFieldNames: String, CaseIterable {
     case four = "  Блокнот"
 }
 
-enum UsefulFieldImages: String, CaseIterable{
+enum UsefulFieldImages: String, CaseIterable {
     case zero = "dumbbell"
     case one = "increase"
     case two = "calculator"
