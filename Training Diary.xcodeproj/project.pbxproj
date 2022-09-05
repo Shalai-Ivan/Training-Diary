@@ -12,8 +12,14 @@
 		9A5704A428B7E8CB000947EE /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */; };
 		9A5704A728B7F476000947EE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */; };
 		9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */; };
+		9ADFB55328C384370019E23F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55228C384370019E23F /* Box.swift */; };
+		9ADFB55728C384670019E23F /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55528C384670019E23F /* MainScreenViewModel.swift */; };
+		9ADFB55828C384670019E23F /* MianScrenViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55628C384670019E23F /* MianScrenViewModelCell.swift */; };
+		9ADFB55A28C3848D0019E23F /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55928C3848D0019E23F /* MainScreenTableViewCell.swift */; };
 		CE3099EA28B757460094BFF6 /* ForSettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099E928B757460094BFF6 /* ForSettingsTableView.swift */; };
 		CE3099EE28B764510094BFF6 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099ED28B764510094BFF6 /* SettingsTableView.swift */; };
+		CE32DF9E28C5F29700A5BF27 /* MainScreenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */; };
+		CE32DFA128C5F2D100A5BF27 /* MainScreenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */; };
 		CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DD28AF94050052EEAD /* AppDelegate.swift */; };
 		CE4051E028AF94050052EEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DF28AF94050052EEAD /* SceneDelegate.swift */; };
 		CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E128AF94050052EEAD /* MainScreenViewController.swift */; };
@@ -43,7 +49,6 @@
 		CE56287428BCCB460044DA61 /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56287328BCCB460044DA61 /* TableViewViewModelType.swift */; };
 		CE56287728BCD8120044DA61 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56287628BCD8120044DA61 /* TableViewCellViewModelType.swift */; };
 		CE56287E28BCD9110044DA61 /* MusclesViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56287D28BCD9110044DA61 /* MusclesViewModelCell.swift */; };
-		CE6A283328B392C200B5C3BD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283228B392C200B5C3BD /* UIViewExtensions.swift */; };
 		CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */; };
 		CE8A484428B4E6BE00341176 /* UsefulTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A484328B4E6BE00341176 /* UsefulTableView.swift */; };
 		CE8A484828B4E81700341176 /* ForUsefulTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A484728B4E81700341176 /* ForUsefulTableView.swift */; };
@@ -59,9 +64,15 @@
 		9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 		9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9ADFB55228C384370019E23F /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		9ADFB55528C384670019E23F /* MainScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		9ADFB55628C384670019E23F /* MianScrenViewModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MianScrenViewModelCell.swift; sourceTree = "<group>"; };
+		9ADFB55928C3848D0019E23F /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
 		BF5D1EE0CBB7993E2291F3F4 /* Pods-Training Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.release.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.release.xcconfig"; sourceTree = "<group>"; };
 		CE3099E928B757460094BFF6 /* ForSettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForSettingsTableView.swift; sourceTree = "<group>"; };
 		CE3099ED28B764510094BFF6 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHeaderView.swift; sourceTree = "<group>"; };
+		CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenHeaderView.xib; sourceTree = "<group>"; };
 		CE4051DA28AF94050052EEAD /* Training Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4051DD28AF94050052EEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4051DF28AF94050052EEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +104,6 @@
 		CE56287328BCCB460044DA61 /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
 		CE56287628BCD8120044DA61 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		CE56287D28BCD9110044DA61 /* MusclesViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewModelCell.swift; sourceTree = "<group>"; };
-		CE6A283228B392C200B5C3BD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForCollectionViewImage.swift; sourceTree = "<group>"; };
 		CE8A484328B4E6BE00341176 /* UsefulTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulTableView.swift; sourceTree = "<group>"; };
 		CE8A484728B4E81700341176 /* ForUsefulTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForUsefulTableView.swift; sourceTree = "<group>"; };
@@ -129,12 +139,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		9A5704A528B7F45E000947EE /* SettingsTableView */ = {
+		9ADFB55128C384370019E23F /* Box */ = {
 			isa = PBXGroup;
 			children = (
-				9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */,
+				9ADFB55228C384370019E23F /* Box.swift */,
 			);
-			path = SettingsTableView;
+			path = Box;
+			sourceTree = "<group>";
+		};
+		9ADFB55428C384670019E23F /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9ADFB55528C384670019E23F /* MainScreenViewModel.swift */,
+				9ADFB55628C384670019E23F /* MianScrenViewModelCell.swift */,
+				CE32DFA428C6000B00A5BF27 /* TableViewHeader */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		CE10867128C07684001C7A84 /* Exercises */ = {
@@ -146,21 +166,32 @@
 			path = Exercises;
 			sourceTree = "<group>";
 		};
-		CE3099E728B742840094BFF6 /* UsefulTableView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UsefulTableView;
-			sourceTree = "<group>";
-		};
 		CE3099EC28B764280094BFF6 /* SettingsTableView */ = {
 			isa = PBXGroup;
 			children = (
+				CE32DFA528C6002100A5BF27 /* TableViewHeader */,
 				CE3099ED28B764510094BFF6 /* SettingsTableView.swift */,
+				9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */,
+			);
+			path = SettingsTableView;
+			sourceTree = "<group>";
+		};
+		CE32DFA428C6000B00A5BF27 /* TableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */,
+				CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */,
+			);
+			path = TableViewHeader;
+			sourceTree = "<group>";
+		};
+		CE32DFA528C6002100A5BF27 /* TableViewHeader */ = {
+			isa = PBXGroup;
+			children = (
 				9A5704A128B7E870000947EE /* CustomHeaderView.swift */,
 				9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */,
 			);
-			path = SettingsTableView;
+			path = TableViewHeader;
 			sourceTree = "<group>";
 		};
 		CE4051D128AF94050052EEAD = {
@@ -202,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4051E128AF94050052EEAD /* MainScreenViewController.swift */,
+				9ADFB55928C3848D0019E23F /* MainScreenTableViewCell.swift */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -234,6 +266,7 @@
 		CE4051FB28AF95880052EEAD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9ADFB55128C384370019E23F /* Box */,
 				CE4051FD28AF95DE0052EEAD /* Extensions */,
 				CE4051FC28AF95BF0052EEAD /* Constants */,
 			);
@@ -250,7 +283,6 @@
 		CE4051FD28AF95DE0052EEAD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CE6A283228B392C200B5C3BD /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +335,7 @@
 		CE40521728AF9ED70052EEAD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9ADFB55428C384670019E23F /* MainScreen */,
 				CE56286828BCC4B30044DA61 /* Lists */,
 				CE3099EC28B764280094BFF6 /* SettingsTableView */,
 				CE8A483828B4DC0E00341176 /* Useful TableView */,
@@ -320,7 +353,6 @@
 				CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */,
 				CE40522228AFA45B0052EEAD /* SettingsScreen.storyboard */,
 				CE4051EB28AF94070052EEAD /* LaunchScreen.storyboard */,
-				CE56284E28BCBAB00044DA61 /* MuscleList.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -338,8 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				CE56287328BCCB460044DA61 /* TableViewViewModelType.swift */,
-				CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */,
 				CE56287628BCD8120044DA61 /* TableViewCellViewModelType.swift */,
+				CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */,
 				CE410AB328C089B400656BE1 /* TableViewDataTransferType.swift */,
 			);
 			path = Protocols;
@@ -366,17 +398,17 @@
 		CE56285E28BCBC210044DA61 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
-				CE56285F28BCBC410044DA61 /* ListMuscles */,
+				CE56285F28BCBC410044DA61 /* Muscles */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
 		};
-		CE56285F28BCBC410044DA61 /* ListMuscles */ = {
+		CE56285F28BCBC410044DA61 /* Muscles */ = {
 			isa = PBXGroup;
 			children = (
 				CE56286F28BCC90A0044DA61 /* Muscle.swift */,
 			);
-			path = ListMuscles;
+			path = Muscles;
 			sourceTree = "<group>";
 		};
 		CE56286828BCC4B30044DA61 /* Lists */ = {
@@ -401,9 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				CE56285E28BCBC210044DA61 /* Lists */,
-				9A5704A528B7F45E000947EE /* SettingsTableView */,
-				CE3099E728B742840094BFF6 /* UsefulTableView */,
-				CE8C2FF828B4C2EB00A1AA3E /* ProgrammsCollectionViewCell */,
 				CE6A283C28B39CBC00B5C3BD /* Enums */,
 			);
 			path = Models;
@@ -424,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */,
+				9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */,
 			);
 			path = ProgrammsCollectionView;
 			sourceTree = "<group>";
@@ -436,17 +466,10 @@
 			path = "Useful TableView";
 			sourceTree = "<group>";
 		};
-		CE8C2FF828B4C2EB00A1AA3E /* ProgrammsCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */,
-			);
-			path = ProgrammsCollectionViewCell;
-			sourceTree = "<group>";
-		};
 		CECF92BC28BE21C000D9C2D1 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				CE56284E28BCBAB00044DA61 /* MuscleList.storyboard */,
 				CE410AAD28C07DCD00656BE1 /* ExercisesList.storyboard */,
 			);
 			path = Exercises;
@@ -516,6 +539,7 @@
 				CE40521B28AFA3C60052EEAD /* ProgrammsScreen.storyboard in Resources */,
 				CE4051E528AF94050052EEAD /* Main.storyboard in Resources */,
 				CE410AAE28C07DCE00656BE1 /* ExercisesList.storyboard in Resources */,
+				CE32DFA128C5F2D100A5BF27 /* MainScreenHeaderView.xib in Resources */,
 				9A5704A028B7DAD0000947EE /* Assets.xcassets in Resources */,
 				CE40521E28AFA4210052EEAD /* UsefulScreen.storyboard in Resources */,
 				CE56284F28BCBAB00044DA61 /* MuscleList.storyboard in Resources */,
@@ -582,9 +606,11 @@
 				CE56285C28BCBB870044DA61 /* MusclesTableViewCell.swift in Sources */,
 				CE410ABE28C0A89E00656BE1 /* ExercisesViewModelCell.swift in Sources */,
 				CE410ABF28C0A89E00656BE1 /* ExercisesViewModel.swift in Sources */,
+				9ADFB55728C384670019E23F /* MainScreenViewModel.swift in Sources */,
 				CE56287E28BCD9110044DA61 /* MusclesViewModelCell.swift in Sources */,
 				CE40521328AF9DF10052EEAD /* MainTabBarController.swift in Sources */,
 				CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */,
+				CE32DF9E28C5F29700A5BF27 /* MainScreenHeaderView.swift in Sources */,
 				CE410AA528C0780D00656BE1 /* ExercisesTableViewCell.swift in Sources */,
 				CE4051E028AF94050052EEAD /* SceneDelegate.swift in Sources */,
 				CE410AA628C0780D00656BE1 /* ExercisesViewController.swift in Sources */,
@@ -594,13 +620,15 @@
 				CE56287728BCD8120044DA61 /* TableViewCellViewModelType.swift in Sources */,
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
-				CE6A283328B392C200B5C3BD /* UIViewExtensions.swift in Sources */,
 				CE8A484828B4E81700341176 /* ForUsefulTableView.swift in Sources */,
 				9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */,
 				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */,
+				9ADFB55A28C3848D0019E23F /* MainScreenTableViewCell.swift in Sources */,
+				9ADFB55328C384370019E23F /* Box.swift in Sources */,
 				CE56287028BCC90A0044DA61 /* Muscle.swift in Sources */,
 				CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */,
+				9ADFB55828C384670019E23F /* MianScrenViewModelCell.swift in Sources */,
 				CE3099EA28B757460094BFF6 /* ForSettingsTableView.swift in Sources */,
 				CE410AB428C089B400656BE1 /* TableViewDataTransferType.swift in Sources */,
 				CE40520D28AF9CF50052EEAD /* SettingsVC.swift in Sources */,

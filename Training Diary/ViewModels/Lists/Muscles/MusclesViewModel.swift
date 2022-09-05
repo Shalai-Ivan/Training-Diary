@@ -8,8 +8,14 @@
 import UIKit
 
 class MusclesViewModel: TableViewViewModelType {
-    private var selectedIndexPath: IndexPath?
-    var muscles = [
+    static var muscleTitle: [String] = []
+    private var selectedIndexPath: IndexPath? {
+        didSet {
+            guard let indexPath = selectedIndexPath else { return }
+            MusclesViewModel.muscleTitle.append(muscles[indexPath.row].text)
+        }
+    }
+    private var muscles = [
         Muscle(image: UIImage(named: "chest")!, text: "Грудь"),
         Muscle(image: UIImage(named: "back")!, text: "Спина"),
         Muscle(image: UIImage(named: "legs")!, text: "Ноги"),
@@ -40,8 +46,8 @@ class MusclesViewModel: TableViewViewModelType {
     func numberOfRows() -> Int {
         return muscles.count
     }
-    func cellViewModel(forIndexPath indexPeth: IndexPath) -> TableViewCellViewModelType {
-        let muscle = muscles[indexPeth.row]
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType {
+        let muscle = muscles[indexPath.row]
         return MusclesViewModelCell(muscle: muscle)
     }
 }

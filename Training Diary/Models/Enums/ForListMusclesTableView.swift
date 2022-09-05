@@ -8,6 +8,6 @@
 import Foundation
 
 enum ForListMusclesTableView: String {
-    case muscleCell
+    case muscleCell, exerciseCell
 }
 

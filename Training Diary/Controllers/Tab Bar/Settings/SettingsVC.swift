@@ -17,7 +17,7 @@ class SettingsVC: UIViewController {
     private func tableViewConfig() {
         let nib = UINib(nibName: "CustomHeaderView", bundle: nil)
         settingsTableView.register(nib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
-        settingsTableView.tableFooterView = UIView()
+//        settingsTableView.tableFooterView = UIView()
     }
 }
 

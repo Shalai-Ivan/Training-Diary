@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Muscle {
-    var image:  UIImage
+struct Muscle: Equatable {
+    var image: UIImage
     var text: String
 }

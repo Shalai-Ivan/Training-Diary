@@ -5,26 +5,27 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Exercises View Controller-->
         <scene sceneID="bBM-Ya-PVR">
             <objects>
-                <viewController id="wzJ-H2-WfX" customClass="ExercisesViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExerciseScreen" id="wzJ-H2-WfX" customClass="ExercisesViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fu5-tT-YW5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-aO-Xkz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJI-aO-Xkz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExercisesTableViewCell" id="pEU-VU-Y4e" customClass="ExercisesTableViewCell" customModule="Training_Diary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" id="pEU-VU-Y4e" customClass="ExercisesTableViewCell" customModule="Training_Diary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEU-VU-Y4e" id="97M-7Z-3cU">
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEU-VU-Y4e" id="97M-7Z-3cU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -35,7 +36,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo5-og-g7C">
-                                                    <rect key="frame" x="53" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="53" y="11" width="41.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -64,8 +65,8 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="imageViewMuscle" destination="kst-Ry-RRi" id="5Vk-LE-oyE"/>
-                                            <outlet property="titleLabelMuscle" destination="mo5-og-g7C" id="2kS-Y1-UoE"/>
+                                            <outlet property="imageViewExercise" destination="kst-Ry-RRi" id="5Vk-LE-oyE"/>
+                                            <outlet property="titleLabelExercise" destination="mo5-og-g7C" id="2kS-Y1-UoE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -74,23 +75,73 @@
                                     <outlet property="delegate" destination="wzJ-H2-WfX" id="Ptj-mi-Bsa"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0e3-1X-fHp">
+                                <rect key="frame" x="327" y="818" width="67" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a27-aj-jNR">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapCancelButton:" destination="wzJ-H2-WfX" eventType="touchUpInside" id="TFd-zK-1Dw"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-Cm-tVZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="29"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" title="Добавить">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapAddButton:" destination="wzJ-H2-WfX" eventType="touchUpInside" id="9lT-6I-cxA"/>
+                                            <segue destination="bII-vu-Mbi" kind="unwind" identifier="unwindSegueToMain" unwindAction="unwindSegueToMain:" id="BYA-t1-Sfm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="njJ-dR-TbC"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="njJ-dR-TbC" firstAttribute="bottom" secondItem="mJI-aO-Xkz" secondAttribute="bottom" id="4WF-ei-577"/>
+                            <constraint firstItem="njJ-dR-TbC" firstAttribute="bottom" secondItem="mJI-aO-Xkz" secondAttribute="bottom" constant="50" id="4WF-ei-577"/>
+                            <constraint firstItem="9JM-Cm-tVZ" firstAttribute="width" secondItem="mJI-aO-Xkz" secondAttribute="width" multiplier="0.200483" id="B6B-e1-YxV"/>
                             <constraint firstItem="mJI-aO-Xkz" firstAttribute="top" secondItem="njJ-dR-TbC" secondAttribute="top" id="Brh-uC-6QV"/>
                             <constraint firstItem="njJ-dR-TbC" firstAttribute="trailing" secondItem="mJI-aO-Xkz" secondAttribute="trailing" id="Cf2-uM-8AE"/>
+                            <constraint firstItem="0e3-1X-fHp" firstAttribute="height" secondItem="mJI-aO-Xkz" secondAttribute="height" multiplier="0.0377604" id="JIK-x3-ZcS"/>
+                            <constraint firstItem="njJ-dR-TbC" firstAttribute="bottom" secondItem="0e3-1X-fHp" secondAttribute="bottom" constant="15" id="LP3-wh-Hjx"/>
+                            <constraint firstItem="a27-aj-jNR" firstAttribute="height" secondItem="mJI-aO-Xkz" secondAttribute="height" multiplier="0.0377604" id="OaZ-of-q9J"/>
+                            <constraint firstItem="a27-aj-jNR" firstAttribute="width" secondItem="mJI-aO-Xkz" secondAttribute="width" multiplier="0.161836" id="VLE-yK-GsQ"/>
                             <constraint firstItem="mJI-aO-Xkz" firstAttribute="leading" secondItem="njJ-dR-TbC" secondAttribute="leading" id="Vsz-DG-4xZ"/>
+                            <constraint firstItem="9JM-Cm-tVZ" firstAttribute="height" secondItem="mJI-aO-Xkz" secondAttribute="height" multiplier="0.0377604" id="lP8-jE-pPT"/>
+                            <constraint firstItem="njJ-dR-TbC" firstAttribute="trailing" secondItem="0e3-1X-fHp" secondAttribute="trailing" constant="20" id="mMt-4h-bgT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addingButton" destination="9JM-Cm-tVZ" id="oNL-no-idO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gv-MZ-BTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bII-vu-Mbi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="292.75362318840581" y="131.91964285714286"/>
         </scene>
     </scenes>
     <resources>
         <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

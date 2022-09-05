@@ -8,13 +8,13 @@
 import UIKit
 
 class ExercisesTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageViewMuscle: UIImageView!
-    @IBOutlet weak var titleLabelMuscle: UILabel!
+    @IBOutlet private weak var imageViewExercise: UIImageView!
+    @IBOutlet private weak var titleLabelExercise: UILabel!
     weak var viewModel: TableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
-            imageViewMuscle.image = viewModel.image
-            titleLabelMuscle.text = viewModel.text
+            imageViewExercise.image = viewModel.image
+            titleLabelExercise.text = viewModel.text
         }
     }
 }

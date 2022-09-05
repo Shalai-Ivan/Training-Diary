@@ -24,8 +24,7 @@ extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ForListMusclesTableView.muscleCell.rawValue) as? MusclesTableViewCell
         guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
-        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
-        tableViewCell.viewModel = cellViewModel
+        tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         return tableViewCell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

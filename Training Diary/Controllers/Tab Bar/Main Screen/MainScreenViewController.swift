@@ -12,40 +12,71 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var timerImageView: UIImageView!
     @IBOutlet private weak var calendarImageView: UIImageView!
     @IBOutlet private weak var listImageView: UIImageView!
-    @IBOutlet private weak var fromAnotherDayTitleLabel: UILabel!
-    @IBOutlet private weak var fromProgrammsTitleLabel: UILabel!
-    @IBOutlet private weak var fromExerciseListTitleLabel: UILabel!
     @IBOutlet private weak var fromAnotherDayButton: UIButton!
     @IBOutlet private weak var fromProgrammsButton: UIButton!
     @IBOutlet private weak var fromExerciseListButton: UIButton!
+    @IBOutlet private weak var stackViewButtons: UIStackView!
+    @IBOutlet private weak var stackViewTitles: UIStackView!
+    @IBOutlet private weak var stackViewZzz: UIStackView!
+    @IBOutlet private weak var tableView: UITableView!
+    
+    var viewModel: MainScreenViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableViewConfig()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        if viewModel?.exercises.isEmpty != nil {
+            stackViewZzz.isHidden = true
+        } else {
+            stackViewZzz.isHidden = false
+        }
+    }
+    private func tableViewConfig() {
+        let nib = UINib(nibName: "MainScreenHeaderView", bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "MainScreenHeaderView")
     }
     @IBAction private func didTapAddExerciseButton(_ sender: Any) {
-        if fromExerciseListButton.isHidden {
-            view.toAnimateHiddenItems(viewElement: fromExerciseListButton, isHide: false)
-            view.toAnimateHiddenItems(viewElement: fromExerciseListTitleLabel, isHide: false)
-            view.toAnimateHiddenItems(viewElement: fromProgrammsTitleLabel, isHide: false)
-            view.toAnimateHiddenItems(viewElement: fromProgrammsButton, isHide: false)
-            view.toAnimateHiddenItems(viewElement: fromAnotherDayTitleLabel, isHide: false)
-            view.toAnimateHiddenItems(viewElement: fromAnotherDayButton, isHide: false)
+        if stackViewButtons.isHidden {
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.stackViewButtons.isHidden = false; self?.stackViewButtons.alpha = 1
+                self?.stackViewTitles.isHidden = false; self?.stackViewTitles.alpha = 1
+            }
         } else {
-            view.toAnimateHiddenItems(viewElement: fromExerciseListButton, isHide: true)
-            view.toAnimateHiddenItems(viewElement: fromExerciseListTitleLabel, isHide: true)
-            view.toAnimateHiddenItems(viewElement: fromProgrammsTitleLabel, isHide: true)
-            view.toAnimateHiddenItems(viewElement: fromProgrammsButton, isHide: true)
-            view.toAnimateHiddenItems(viewElement: fromAnotherDayTitleLabel, isHide: true)
-            view.toAnimateHiddenItems(viewElement: fromAnotherDayButton, isHide: true)
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.stackViewButtons.isHidden = true; self?.stackViewButtons.alpha = 0
+                self?.stackViewTitles.isHidden = true; self?.stackViewTitles.alpha = 0
+            }
         }
     }
     @IBAction private func didTapListOfExercisesButton(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
+        stackViewButtons.isHidden = true; stackViewButtons.alpha = 0
+        stackViewTitles.isHidden = true; stackViewTitles.alpha = 0
     }
     @IBAction private func didTapFromProgrammsButton(_ sender: Any) {
     }
     @IBAction private func didTapFromAnotherDayButton(_ sender: Any) {
     }
-    @IBAction func unwindSegueBack(_ sender: UIStoryboardSegue) {
+    @IBAction private func unwindSegueToMain(_ sender: UIStoryboardSegue) {
+    }
+}
+
+extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MainScreenHeaderView") as? MainScreenHeaderView
+        header?.titleLabel.text = viewModel?.getTitleMuscle()
+        return header
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.numberOfRows() ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as? MainScreenTableViewCell
+        guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
+        tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        return tableViewCell
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol TableViewDataTransferType {
-    func didSelectRow(forIndexPath number: IndexPath)
+    func didSelectRow(forIndexPath indexPath: IndexPath)
     func viewModelForSelectedRow() -> ExercisesViewModelType?
 }

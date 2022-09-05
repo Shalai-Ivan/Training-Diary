@@ -8,8 +8,8 @@
 import UIKit
 
 class MusclesTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageViewMuscle: UIImageView!
-    @IBOutlet weak var titleLabelMuscle: UILabel!
+    @IBOutlet private weak var imageViewMuscle: UIImageView!
+    @IBOutlet private weak var titleLabelMuscle: UILabel!
     weak var viewModel: TableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
