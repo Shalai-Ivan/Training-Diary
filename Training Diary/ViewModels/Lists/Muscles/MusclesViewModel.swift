@@ -9,6 +9,9 @@ import UIKit
 
 class MusclesViewModel: TableViewViewModelType {
     static var muscleTitle: [String] = []
+    static func deleteMuscleTitle() {
+        muscleTitle.removeLast()
+    }
     private var selectedIndexPath: IndexPath? {
         didSet {
             guard let indexPath = selectedIndexPath else { return }

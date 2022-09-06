@@ -19,7 +19,6 @@ class MainScreenViewModel: ExercisesViewModelType {
             tempArray.append(item)
         }
         let result = tempArray.joined(separator: " ")
-        print(result)
         return result
     }
 }

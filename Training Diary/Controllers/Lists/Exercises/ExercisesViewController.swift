@@ -14,8 +14,15 @@ class ExercisesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            MusclesViewModel.deleteMuscleTitle()
+        }
+    }
     @IBAction private func didTapCancelButton(_ sender: Any) {
         viewModel?.chosenExercises.removeAll()
+        MusclesViewModel.deleteMuscleTitle()
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     @IBAction private func didTapAddButton(_ sender: Any) {
