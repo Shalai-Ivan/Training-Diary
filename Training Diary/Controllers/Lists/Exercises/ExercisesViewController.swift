@@ -15,6 +15,7 @@ class ExercisesViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction private func didTapCancelButton(_ sender: Any) {
+        viewModel?.chosenExercises.removeAll()
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     @IBAction private func didTapAddButton(_ sender: Any) {

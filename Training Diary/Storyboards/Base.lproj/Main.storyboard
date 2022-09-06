@@ -78,6 +78,8 @@
                                         <connections>
                                             <outlet property="imageView" destination="oQq-u1-y5L" id="kzu-Nr-v2f"/>
                                             <outlet property="imageViewMain" destination="oQq-u1-y5L" id="W4i-gq-NiH"/>
+                                            <outlet property="plusButton" destination="2Td-25-tfM" id="iRy-1p-prA"/>
+                                            <outlet property="settingsButton" destination="5bT-P2-deE" id="Jcx-cr-6wo"/>
                                             <outlet property="titleLabelMain" destination="iq3-kb-kCe" id="lG6-0V-aLm"/>
                                         </connections>
                                     </tableViewCell>
@@ -326,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521.73913043478262" y="782.8125"/>
+            <point key="canvasLocation" x="513" y="652"/>
         </scene>
         <!--MuscleList-->
         <scene sceneID="8KK-zp-t0g">
@@ -367,6 +369,7 @@
             <objects>
                 <viewControllerPlaceholder storyboardName="ProgrammsScreen" id="yK0-8V-hlC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Programms" image="pencil" catalog="system" id="2cJ-7R-N4G"/>
+                    <navigationItem key="navigationItem" id="pE5-Fe-Ncx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QvK-Lq-HXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,10 +395,20 @@
             </objects>
             <point key="canvasLocation" x="-309" y="570"/>
         </scene>
+        <!--CellSettingsTableVC-->
+        <scene sceneID="dYr-cV-7st">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CellSettingsTableVC" id="Rct-KL-9kn" sceneMemberID="viewController">
+                    <size key="freeformSize" width="250" height="250"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4a4-xI-wnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="731"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="calendar" width="16" height="16"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar" width="16" height="16"/>
         <image name="calendar-2" width="16" height="16"/>
         <image name="dumbbell-5" width="16" height="16"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>

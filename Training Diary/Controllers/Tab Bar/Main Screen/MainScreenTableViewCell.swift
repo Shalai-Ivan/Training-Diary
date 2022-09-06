@@ -10,6 +10,8 @@ import UIKit
 class MainScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewMain: UIImageView!
     @IBOutlet weak var titleLabelMain: UILabel!
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     weak var viewModel: TableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }

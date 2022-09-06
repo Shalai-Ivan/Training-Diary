@@ -19,3 +19,4 @@ class MainScreenViewModelCell: TableViewCellViewModelType {
         self.muscle = muscle
     }
 }
+

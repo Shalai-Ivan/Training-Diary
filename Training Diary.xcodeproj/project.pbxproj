@@ -20,6 +20,8 @@
 		CE3099EE28B764510094BFF6 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099ED28B764510094BFF6 /* SettingsTableView.swift */; };
 		CE32DF9E28C5F29700A5BF27 /* MainScreenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */; };
 		CE32DFA128C5F2D100A5BF27 /* MainScreenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */; };
+		CE32DFAB28C6110D00A5BF27 /* CellSettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */; };
+		CE32DFAF28C6124000A5BF27 /* CellSettingsTableVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */; };
 		CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DD28AF94050052EEAD /* AppDelegate.swift */; };
 		CE4051E028AF94050052EEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DF28AF94050052EEAD /* SceneDelegate.swift */; };
 		CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E128AF94050052EEAD /* MainScreenViewController.swift */; };
@@ -73,6 +75,8 @@
 		CE3099ED28B764510094BFF6 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
 		CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHeaderView.swift; sourceTree = "<group>"; };
 		CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenHeaderView.xib; sourceTree = "<group>"; };
+		CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSettingsTableVC.swift; sourceTree = "<group>"; };
+		CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CellSettingsTableVC.storyboard; sourceTree = "<group>"; };
 		CE4051DA28AF94050052EEAD /* Training Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4051DD28AF94050052EEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4051DF28AF94050052EEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -194,6 +198,22 @@
 			path = TableViewHeader;
 			sourceTree = "<group>";
 		};
+		CE32DFA928C610D700A5BF27 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		CE32DFAD28C6121E00A5BF27 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		CE4051D128AF94050052EEAD = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +310,7 @@
 		CE4051FE28AF95FB0052EEAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE32DFA928C610D700A5BF27 /* TableViewController */,
 				CE56284A28BCB7A40044DA61 /* Lists */,
 				CE40521128AF9DB00052EEAD /* Tab Bar */,
 			);
@@ -347,6 +368,7 @@
 		CE40521828AF9EEE0052EEAD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CE32DFAD28C6121E00A5BF27 /* TableViewControllers */,
 				CECF92BC28BE21C000D9C2D1 /* Exercises */,
 				CE4051E328AF94050052EEAD /* Main.storyboard */,
 				CE40521A28AFA3C60052EEAD /* ProgrammsScreen.storyboard */,
@@ -536,6 +558,7 @@
 			files = (
 				CE4051ED28AF94070052EEAD /* LaunchScreen.storyboard in Resources */,
 				CE40522328AFA45B0052EEAD /* SettingsScreen.storyboard in Resources */,
+				CE32DFAF28C6124000A5BF27 /* CellSettingsTableVC.storyboard in Resources */,
 				CE40521B28AFA3C60052EEAD /* ProgrammsScreen.storyboard in Resources */,
 				CE4051E528AF94050052EEAD /* Main.storyboard in Resources */,
 				CE410AAE28C07DCE00656BE1 /* ExercisesList.storyboard in Resources */,
@@ -621,6 +644,7 @@
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
 				CE8A484828B4E81700341176 /* ForUsefulTableView.swift in Sources */,
+				CE32DFAB28C6110D00A5BF27 /* CellSettingsTableVC.swift in Sources */,
 				9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */,
 				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */,

@@ -57,6 +57,9 @@ class MainScreenViewController: UIViewController {
         stackViewTitles.isHidden = true; stackViewTitles.alpha = 0
     }
     @IBAction private func didTapFromProgrammsButton(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 1
+        stackViewButtons.isHidden = true; stackViewButtons.alpha = 0
+        stackViewTitles.isHidden = true; stackViewTitles.alpha = 0
     }
     @IBAction private func didTapFromAnotherDayButton(_ sender: Any) {
     }
