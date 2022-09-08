@@ -1,3 +1,10 @@
 excluded:
 - Pods
 - Training Diary/Application
+line_length:
+- 150 # warning 
+- 180 # error
+large_tuple:
+- 4 # warning
+cyclomatic_complexity:
+- 12 # warning

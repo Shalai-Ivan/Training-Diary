@@ -8,10 +8,9 @@
 import UIKit
 
 class MainScreenTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageViewMain: UIImageView!
-    @IBOutlet weak var titleLabelMain: UILabel!
-    @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet private weak var imageViewMain: UIImageView!
+    @IBOutlet private weak var titleLabelMain: UILabel!
+    @IBOutlet private weak var plusButton: UIButton!
     weak var viewModel: TableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
@@ -19,8 +18,13 @@ class MainScreenTableViewCell: UITableViewCell {
             titleLabelMain.text = viewModel.text
         }
     }
-    @IBAction func didTapPlusButton(_ sender: Any) {
+    var delegate: TableViewDeletingCellsType?
+    var indexPath: IndexPath?
+    @IBAction private func didTapPlusButton(_ sender: Any) {
     }
-    @IBAction func didTapSettingsButton(_ sender: Any) {
+    @IBAction private func didTapDeleteButton(_ sender: UIButton) {
+        guard let indexPath = indexPath else { return }
+        delegate?.delete(forIndexPath: indexPath)
     }
 }
+extension MainScreenTableViewCell: UITableViewDelegate { }

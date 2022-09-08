@@ -7,8 +7,10 @@
 
 import UIKit
 
-class CellSettingsTableVC: UITableViewController {
-
+class PopoverTableVC: UITableViewController {
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,4 +27,8 @@ class CellSettingsTableVC: UITableViewController {
         return 0
     }
 }
-
+extension PopoverTableVC: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        .none
+    }
+}

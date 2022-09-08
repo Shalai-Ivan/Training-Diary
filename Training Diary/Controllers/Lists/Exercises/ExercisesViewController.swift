@@ -26,6 +26,8 @@ class ExercisesViewController: UIViewController {
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     @IBAction private func didTapAddButton(_ sender: Any) {
+        MusclesViewModel.muscleTitle += Array(repeating: MusclesViewModel.muscleTitle.last ?? "",
+                                              count: (viewModel?.chosenExercises.count ?? 1) - 1)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier

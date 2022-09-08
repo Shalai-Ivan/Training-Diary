@@ -19,7 +19,6 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var stackViewTitles: UIStackView!
     @IBOutlet private weak var stackViewZzz: UIStackView!
     @IBOutlet private weak var tableView: UITableView!
-    
     var viewModel: MainScreenViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +33,7 @@ class MainScreenViewController: UIViewController {
             stackViewZzz.isHidden = false
         }
     }
+
     private func tableViewConfig() {
         let nib = UINib(nibName: "MainScreenHeaderView", bundle: nil)
         tableView.register(nib, forHeaderFooterViewReuseIdentifier: "MainScreenHeaderView")
@@ -65,6 +65,8 @@ class MainScreenViewController: UIViewController {
     }
     @IBAction private func unwindSegueToMain(_ sender: UIStoryboardSegue) {
     }
+    @IBAction func didTapSettingsCellButton(_ sender: Any) {
+    }
 }
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
@@ -80,6 +82,18 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as? MainScreenTableViewCell
         guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
         tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        tableViewCell.delegate = self
+        tableViewCell.indexPath = indexPath
         return tableViewCell
+    }
+}
+
+extension MainScreenViewController: TableViewDeletingCellsType {
+    func delete(forIndexPath indexPath: IndexPath) {
+        self.viewModel?.exercises.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .none)
+        MusclesViewModel.muscleTitle.remove(at: indexPath.row)
+        guard !tableView.visibleCells.isEmpty else { return stackViewZzz.isHidden = false }
+        tableView.reloadData()
     }
 }

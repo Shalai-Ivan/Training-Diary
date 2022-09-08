@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A3F1F7728C8DC4300059112 /* TableViewDeletingCellsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3F1F7628C8DC4300059112 /* TableViewDeletingCellsType.swift */; };
 		9A5704A028B7DAD0000947EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A57049F28B7DAD0000947EE /* Assets.xcassets */; };
 		9A5704A228B7E870000947EE /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A128B7E870000947EE /* CustomHeaderView.swift */; };
 		9A5704A428B7E8CB000947EE /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */; };
@@ -20,8 +21,8 @@
 		CE3099EE28B764510094BFF6 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3099ED28B764510094BFF6 /* SettingsTableView.swift */; };
 		CE32DF9E28C5F29700A5BF27 /* MainScreenHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */; };
 		CE32DFA128C5F2D100A5BF27 /* MainScreenHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */; };
-		CE32DFAB28C6110D00A5BF27 /* CellSettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */; };
-		CE32DFAF28C6124000A5BF27 /* CellSettingsTableVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */; };
+		CE32DFAB28C6110D00A5BF27 /* PopoverTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32DFAA28C6110D00A5BF27 /* PopoverTableVC.swift */; };
+		CE32DFAF28C6124000A5BF27 /* PopoverTableVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE32DFAE28C6124000A5BF27 /* PopoverTableVC.storyboard */; };
 		CE4051DE28AF94050052EEAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DD28AF94050052EEAD /* AppDelegate.swift */; };
 		CE4051E028AF94050052EEAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051DF28AF94050052EEAD /* SceneDelegate.swift */; };
 		CE4051E228AF94050052EEAD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E128AF94050052EEAD /* MainScreenViewController.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		7F59E7BC7F3A44652C91AF14 /* Pods_Training_Diary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Training_Diary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBC3501A9A7A723C270DDCB /* Pods-Training Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.debug.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.debug.xcconfig"; sourceTree = "<group>"; };
+		9A3F1F7628C8DC4300059112 /* TableViewDeletingCellsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDeletingCellsType.swift; sourceTree = "<group>"; };
 		9A57049F28B7DAD0000947EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A5704A128B7E870000947EE /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		9A5704A328B7E8CB000947EE /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
@@ -75,8 +77,8 @@
 		CE3099ED28B764510094BFF6 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
 		CE32DF9D28C5F29700A5BF27 /* MainScreenHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenHeaderView.swift; sourceTree = "<group>"; };
 		CE32DFA028C5F2D100A5BF27 /* MainScreenHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenHeaderView.xib; sourceTree = "<group>"; };
-		CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSettingsTableVC.swift; sourceTree = "<group>"; };
-		CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CellSettingsTableVC.storyboard; sourceTree = "<group>"; };
+		CE32DFAA28C6110D00A5BF27 /* PopoverTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTableVC.swift; sourceTree = "<group>"; };
+		CE32DFAE28C6124000A5BF27 /* PopoverTableVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverTableVC.storyboard; sourceTree = "<group>"; };
 		CE4051DA28AF94050052EEAD /* Training Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4051DD28AF94050052EEAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4051DF28AF94050052EEAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,7 +203,7 @@
 		CE32DFA928C610D700A5BF27 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE32DFAA28C6110D00A5BF27 /* CellSettingsTableVC.swift */,
+				CE32DFAA28C6110D00A5BF27 /* PopoverTableVC.swift */,
 			);
 			path = TableViewController;
 			sourceTree = "<group>";
@@ -209,7 +211,7 @@
 		CE32DFAD28C6121E00A5BF27 /* TableViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE32DFAE28C6124000A5BF27 /* CellSettingsTableVC.storyboard */,
+				CE32DFAE28C6124000A5BF27 /* PopoverTableVC.storyboard */,
 			);
 			path = TableViewControllers;
 			sourceTree = "<group>";
@@ -395,6 +397,7 @@
 				CE56287628BCD8120044DA61 /* TableViewCellViewModelType.swift */,
 				CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */,
 				CE410AB328C089B400656BE1 /* TableViewDataTransferType.swift */,
+				9A3F1F7628C8DC4300059112 /* TableViewDeletingCellsType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -558,7 +561,7 @@
 			files = (
 				CE4051ED28AF94070052EEAD /* LaunchScreen.storyboard in Resources */,
 				CE40522328AFA45B0052EEAD /* SettingsScreen.storyboard in Resources */,
-				CE32DFAF28C6124000A5BF27 /* CellSettingsTableVC.storyboard in Resources */,
+				CE32DFAF28C6124000A5BF27 /* PopoverTableVC.storyboard in Resources */,
 				CE40521B28AFA3C60052EEAD /* ProgrammsScreen.storyboard in Resources */,
 				CE4051E528AF94050052EEAD /* Main.storyboard in Resources */,
 				CE410AAE28C07DCE00656BE1 /* ExercisesList.storyboard in Resources */,
@@ -625,6 +628,7 @@
 				CE56286B28BCC4D30044DA61 /* MusclesViewModel.swift in Sources */,
 				CE56286628BCC31F0044DA61 /* ForListMusclesTableView.swift in Sources */,
 				9A5704A728B7F476000947EE /* SettingsTableViewCell.swift in Sources */,
+				9A3F1F7728C8DC4300059112 /* TableViewDeletingCellsType.swift in Sources */,
 				CE40520F28AF9D080052EEAD /* ProgrammsVC.swift in Sources */,
 				CE56285C28BCBB870044DA61 /* MusclesTableViewCell.swift in Sources */,
 				CE410ABE28C0A89E00656BE1 /* ExercisesViewModelCell.swift in Sources */,
@@ -644,7 +648,7 @@
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
 				CE8A484828B4E81700341176 /* ForUsefulTableView.swift in Sources */,
-				CE32DFAB28C6110D00A5BF27 /* CellSettingsTableVC.swift in Sources */,
+				CE32DFAB28C6110D00A5BF27 /* PopoverTableVC.swift in Sources */,
 				9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */,
 				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */,

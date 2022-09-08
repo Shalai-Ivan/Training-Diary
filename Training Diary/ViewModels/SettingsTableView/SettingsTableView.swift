@@ -9,31 +9,25 @@ import UIKit
 
 struct SettingsTableView {
     private var arrayMain: [String] {
-        get {
-            var array = [String]()
-            for item in SettingsTableViewCellFields.Main.allCases {
-                array.append(item.rawValue)
-            }
-            return array
+        var array = [String]()
+        for item in SettingsTableViewCellFields.Main.allCases {
+            array.append(item.rawValue)
         }
+        return array
     }
     private var arrayInterface: [String] {
-        get {
-            var array = [String]()
-            for item in SettingsTableViewCellFields.Interface.allCases {
-                array.append(item.rawValue)
-            }
-            return array
+        var array = [String]()
+        for item in SettingsTableViewCellFields.Interface.allCases {
+            array.append(item.rawValue)
         }
+        return array
     }
     private var arrayAdditionally: [String] {
-        get {
-            var array = [String]()
-            for item in SettingsTableViewCellFields.Additionally.allCases {
-                array.append(item.rawValue)
-            }
-            return array
+        var array = [String]()
+        for item in SettingsTableViewCellFields.Additionally.allCases {
+            array.append(item.rawValue)
         }
+        return array
     }
 
     static func toCountRowsInSection(section: Int) -> Int {

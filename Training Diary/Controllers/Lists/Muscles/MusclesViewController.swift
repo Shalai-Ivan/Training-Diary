@@ -15,7 +15,6 @@ class MusclesViewController: UIViewController {
         viewModel = MusclesViewModel()
     }
     @IBAction func didTapBackButton(_ sender: Any) {
-        
     }
 }
     // MARK: - Table view data source

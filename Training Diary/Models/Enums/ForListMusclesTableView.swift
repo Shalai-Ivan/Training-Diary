@@ -10,4 +10,3 @@ import Foundation
 enum ForListMusclesTableView: String {
     case muscleCell, exerciseCell
 }
-
