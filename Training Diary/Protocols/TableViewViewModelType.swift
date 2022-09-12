@@ -5,7 +5,7 @@
 //  Created by user on 29.08.2022.
 //
 
-import Foundation
+import UIKit
 
 protocol TableViewViewModelType {
     func numberOfRows() -> Int

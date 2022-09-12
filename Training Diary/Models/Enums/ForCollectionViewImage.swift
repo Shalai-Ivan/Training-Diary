@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum ProgrammsCollectionViewImage: String {
-    case cellIdentifier = "collectionViewCell"
-}
-
 enum ProgrammLevels: String {
     case beginner = "НАЧАЛЬНЫЙ"
     case middle = "СРЕДНИЙ"

@@ -15,15 +15,15 @@ class SettingsVC: UIViewController {
         tableViewConfig()
     }
     private func tableViewConfig() {
-        let nib = UINib(nibName: "CustomHeaderView", bundle: nil)
-        settingsTableView.register(nib, forHeaderFooterViewReuseIdentifier: "CustomHeaderView")
+        let nib = UINib(nibName: Identifiers.Headers.settingsHeader.rawValue, bundle: nil)
+        settingsTableView.register(nib, forHeaderFooterViewReuseIdentifier: Identifiers.Headers.settingsHeader.rawValue)
 //        settingsTableView.tableFooterView = UIView()
     }
 }
 
 extension SettingsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CustomHeaderView") as? CustomHeaderView
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Identifiers.Headers.settingsHeader.rawValue) as? SettingsHeaderView
         header?.titleLabel.text = SettingsTableView.toSetSectionTitle(section: section)
         return header
     }

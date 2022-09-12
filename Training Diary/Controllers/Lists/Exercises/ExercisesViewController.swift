@@ -31,9 +31,8 @@ class ExercisesViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier
-        if identifier == "unwindSegueToMain" {
-            guard let mvc = segue.destination as? MainScreenViewController,
-                  let viewModel = viewModel else { return }
+        if identifier == Identifiers.Segues.toMainUnwind.rawValue {
+            guard let mvc = segue.destination as? MainScreenViewController, let viewModel = viewModel else { return }
             if mvc.viewModel == nil {
                 mvc.viewModel = viewModel.viewModelForSelectedRow() as? MainScreenViewModel
             } else {
@@ -48,7 +47,7 @@ extension ExercisesViewController: UITableViewDataSource, UITableViewDelegate {
         return  viewModel?.numberOfRows() ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ForListMusclesTableView.exerciseCell.rawValue) as? ExercisesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.exerciseCell.rawValue) as? ExercisesTableViewCell
         guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
         tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         return tableViewCell
@@ -76,5 +75,8 @@ extension ExercisesViewController: UITableViewDataSource, UITableViewDelegate {
                 self?.addingButton.alpha = 0
             }
         }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return view.frame.height / 15
     }
 }

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mKz-8d-5TD">
-                                <rect key="frame" x="20" y="90.5" width="374" height="722.5"/>
+                                <rect key="frame" x="20" y="100.5" width="374" height="712.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="76" id="rQg-p2-HiK" customClass="MainScreenTableViewCell" customModule="Training_Diary" customModuleProvider="target">
@@ -30,6 +30,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oQq-u1-y5L">
                                                     <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                    <gestureRecognizers/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq3-kb-kCe">
                                                     <rect key="frame" x="59" y="0.0" width="41.5" height="44"/>
@@ -43,7 +44,7 @@
                                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" image="plus" catalog="system"/>
                                                     <connections>
-                                                        <action selector="didTapPlusButton:" destination="rQg-p2-HiK" eventType="touchUpInside" id="Vdn-FQ-8IR"/>
+                                                        <action selector="didTapPlusButton:" destination="rQg-p2-HiK" eventType="touchUpInside" id="tIh-Zd-qO2"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-P2-deE">
@@ -55,6 +56,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5bT-P2-deE" secondAttribute="trailing" id="DiG-Nw-icl"/>
                                                 <constraint firstItem="oQq-u1-y5L" firstAttribute="leading" secondItem="2Ot-xt-k3S" secondAttribute="leading" id="F74-hc-WBC"/>
@@ -77,9 +79,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="imageView" destination="oQq-u1-y5L" id="kzu-Nr-v2f"/>
                                             <outlet property="imageViewMain" destination="oQq-u1-y5L" id="W4i-gq-NiH"/>
-                                            <outlet property="plusButton" destination="2Td-25-tfM" id="iRy-1p-prA"/>
+                                            <outlet property="plusButton" destination="2Td-25-tfM" id="d2D-K7-CgJ"/>
                                             <outlet property="titleLabelMain" destination="iq3-kb-kCe" id="lG6-0V-aLm"/>
                                         </connections>
                                     </tableViewCell>
@@ -90,7 +91,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сегодня" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glj-jA-Wcp">
-                                <rect key="frame" x="40" y="44" width="90" height="36.5"/>
+                                <rect key="frame" x="40" y="54" width="90" height="36.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,24 +104,27 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y2a-kJ-t26">
-                                <rect key="frame" x="324" y="45" width="24" height="34"/>
+                                <rect key="frame" x="324" y="55" width="24" height="34"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mmT-2r-LG4">
-                                <rect key="frame" x="368" y="51" width="24" height="22"/>
+                                <rect key="frame" x="368" y="61" width="24" height="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2D-6D-fDk">
-                                <rect key="frame" x="334" y="718.5" width="60" height="54.5"/>
+                                <rect key="frame" x="334" y="713" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y2D-6D-fDk" secondAttribute="height" multiplier="1:1" id="3I9-YQ-RmJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="28"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -128,38 +132,35 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a8F-qV-Jko">
-                                <rect key="frame" x="280" y="42.5" width="24" height="37.5"/>
+                                <rect key="frame" x="280" y="52.5" width="24" height="37.5"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView hidden="YES" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="e0e-mv-Pn3">
-                                <rect key="frame" x="344" y="548" width="40" height="155.5"/>
+                                <rect key="frame" x="344" y="549.5" width="40" height="148.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-2Q-mrm">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="" image="calendar-2"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapFromAnotherDayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpp-lB-Um3"/>
-                                            <segue destination="Rct-KL-9kn" kind="popoverPresentation" popoverAnchorView="ZZI-2Q-mrm" id="mNa-YA-QgI">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfc-tW-jTZ">
-                                        <rect key="frame" x="0.0" y="58.5" width="40" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="40" height="36.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="" image="calendar"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -167,7 +168,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYc-1k-pn0">
-                                        <rect key="frame" x="0.0" y="117" width="40" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="112.5" width="40" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="dumbbell-5">
@@ -175,12 +176,12 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
+                                                <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapListOfExercisesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcD-x0-CJZ"/>
-                                            <segue destination="BUj-ug-Uua" kind="show" id="bXu-3u-uHI"/>
+                                            <segue destination="BUj-ug-Uua" kind="show" identifier="toMain" id="bXu-3u-uHI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -191,10 +192,10 @@
                                 </constraints>
                             </stackView>
                             <stackView alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4Y8-Nf-aml">
-                                <rect key="frame" x="157.5" y="551" width="166.5" height="150.5"/>
+                                <rect key="frame" x="157.5" y="552" width="166.5" height="144"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIK-fh-9iq">
-                                        <rect key="frame" x="54" y="0.0" width="112.5" height="30"/>
+                                        <rect key="frame" x="54" y="0.0" width="112.5" height="28"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Из другого дня">
@@ -215,7 +216,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmK-6Y-z8U">
-                                        <rect key="frame" x="56.5" y="60" width="110" height="30"/>
+                                        <rect key="frame" x="56.5" y="58" width="110" height="28"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Из программы">
@@ -235,7 +236,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U5-Hv-uAI">
-                                        <rect key="frame" x="0.0" y="120" width="166.5" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="116" width="166.5" height="28"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Из списка упражнений">
@@ -257,25 +258,27 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Egq-NL-Ct0">
-                                <rect key="frame" x="30" y="315" width="354" height="183"/>
+                                <rect key="frame" x="30" y="313.5" width="354" height="186"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="zzz" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0CN-of-yGy">
-                                        <rect key="frame" x="0.0" y="0.5" width="354" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.5" width="354" height="153"/>
                                         <color key="tintColor" red="0.41834549492385786" green="0.41834549492385786" blue="0.41834549492385786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тренировка отсутствует" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lN7-GC-zxo">
-                                        <rect key="frame" x="0.0" y="150.5" width="354" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="153.5" width="354" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" red="0.46385800840000002" green="0.46392846110000002" blue="0.46384263040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="lN7-GC-zxo" firstAttribute="top" secondItem="0CN-of-yGy" secondAttribute="bottom" id="5UA-tT-8fZ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="y2D-6D-fDk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0669643" id="1Gu-Ie-VFM"/>
                             <constraint firstItem="Egq-NL-Ct0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="1to-8i-8ij"/>
                             <constraint firstItem="mKz-8d-5TD" firstAttribute="top" secondItem="glj-jA-Wcp" secondAttribute="bottom" constant="10" id="3Tc-pg-6ef"/>
                             <constraint firstItem="a8F-qV-Jko" firstAttribute="width" secondItem="glj-jA-Wcp" secondAttribute="width" multiplier="0.266667" id="4J0-T1-3vv"/>
@@ -294,13 +297,13 @@
                             <constraint firstItem="Egq-NL-Ct0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5N-nH-ukP"/>
                             <constraint firstItem="a8F-qV-Jko" firstAttribute="leading" secondItem="glj-jA-Wcp" secondAttribute="trailing" constant="150" id="UeB-Or-MgK"/>
                             <constraint firstItem="Y2a-kJ-t26" firstAttribute="bottom" secondItem="glj-jA-Wcp" secondAttribute="bottom" id="Ufm-QP-N3V"/>
-                            <constraint firstItem="y2D-6D-fDk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.144928" id="VLg-EE-FPc"/>
+                            <constraint firstItem="e0e-mv-Pn3" firstAttribute="height" secondItem="y2D-6D-fDk" secondAttribute="height" multiplier="2.475" id="VvD-pM-rUC"/>
                             <constraint firstItem="a8F-qV-Jko" firstAttribute="top" secondItem="glj-jA-Wcp" secondAttribute="top" id="YkV-5P-y57"/>
                             <constraint firstItem="e0e-mv-Pn3" firstAttribute="top" secondItem="Egq-NL-Ct0" secondAttribute="bottom" constant="50" id="c9r-9j-gd7"/>
                             <constraint firstItem="Egq-NL-Ct0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dCF-kp-5Ei"/>
                             <constraint firstItem="Y2a-kJ-t26" firstAttribute="leading" secondItem="a8F-qV-Jko" secondAttribute="trailing" constant="20" id="duE-lU-pPs"/>
-                            <constraint firstItem="e0e-mv-Pn3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.191267" id="eYh-or-fd0"/>
-                            <constraint firstItem="glj-jA-Wcp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h6z-i8-XoC"/>
+                            <constraint firstItem="y2D-6D-fDk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="20:271" id="eSM-fu-kee"/>
+                            <constraint firstItem="glj-jA-Wcp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="h6z-i8-XoC"/>
                             <constraint firstItem="Y2a-kJ-t26" firstAttribute="height" secondItem="a8F-qV-Jko" secondAttribute="height" id="hY1-E7-jdq"/>
                             <constraint firstItem="mmT-2r-LG4" firstAttribute="bottom" secondItem="glj-jA-Wcp" secondAttribute="bottom" id="ibB-gK-kQY"/>
                             <constraint firstItem="mKz-8d-5TD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k4c-Vd-59U"/>
@@ -322,26 +325,39 @@
                         <outlet property="fromExerciseListButton" destination="bYc-1k-pn0" id="3DC-4Z-A2Q"/>
                         <outlet property="fromProgrammsButton" destination="Rfc-tW-jTZ" id="A3b-FR-VHj"/>
                         <outlet property="listImageView" destination="mmT-2r-LG4" id="3XB-WH-9jE"/>
+                        <outlet property="plusButton" destination="y2D-6D-fDk" id="knA-hA-jhs"/>
                         <outlet property="stackViewButtons" destination="e0e-mv-Pn3" id="yjl-nn-CP8"/>
                         <outlet property="stackViewTitles" destination="4Y8-Nf-aml" id="UjZ-mB-Xi7"/>
                         <outlet property="stackViewZzz" destination="Egq-NL-Ct0" id="X4D-5P-aUE"/>
                         <outlet property="tableView" destination="mKz-8d-5TD" id="Fkn-ox-cxU"/>
                         <outlet property="timerImageView" destination="a8F-qV-Jko" id="JV6-vY-JF0"/>
+                        <segue destination="unU-jI-9W5" kind="presentation" identifier="toCellInformation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="JGY-Sa-Hzp"/>
+                        <segue destination="1xh-Gl-wdz" kind="popoverPresentation" identifier="toApproach" popoverAnchorView="mKz-8d-5TD" id="vZN-YR-4Ga">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="650"/>
+            <point key="canvasLocation" x="428" y="783"/>
         </scene>
-        <!--MuscleList-->
+        <!--ApproachScreen-->
+        <scene sceneID="wD6-UX-O4X">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ApproachScreen" storyboardName="ApproachScreen" id="1xh-Gl-wdz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yn-AM-fep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="706"/>
+        </scene>
+        <!--MuscleScreen-->
         <scene sceneID="8KK-zp-t0g">
             <objects>
-                <viewControllerPlaceholder storyboardName="MuscleList" id="BUj-ug-Uua" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MuscleScreen" storyboardName="MuscleScreen" id="BUj-ug-Uua" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="CX0-HZ-7cE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3j4-SD-DA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="790"/>
+            <point key="canvasLocation" x="1103" y="769"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="ygv-dL-4TI">
@@ -398,21 +414,20 @@
             </objects>
             <point key="canvasLocation" x="-309" y="570"/>
         </scene>
-        <!--PopoverTableVC-->
-        <scene sceneID="dYr-cV-7st">
+        <!--CellInformationScreen-->
+        <scene sceneID="TOy-l9-Zka">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="popoverTableVC" storyboardName="PopoverTableVC" id="Rct-KL-9kn" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="UWz-Eo-TLk"/>
-                    <size key="freeformSize" width="250" height="250"/>
+                <viewControllerPlaceholder storyboardName="CellInformationScreen" id="unU-jI-9W5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AhG-9D-7Yo"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4a4-xI-wnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unq-q4-Axk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128" y="710"/>
+            <point key="canvasLocation" x="1119" y="642"/>
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar" width="16" height="16"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar-2" width="16" height="16"/>
         <image name="dumbbell-5" width="16" height="16"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>

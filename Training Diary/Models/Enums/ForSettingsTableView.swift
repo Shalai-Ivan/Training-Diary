@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum SettingsTableViewIndentifiers: String {
-    case firstCellIdentifier = "SettingsTableViewCell"
-}
-
 enum SettingsTableViewCellFields {
     enum Main: String, CaseIterable {
         case zero = "Меры веса и расстояния"

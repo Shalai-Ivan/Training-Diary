@@ -19,6 +19,7 @@ class MainScreenViewController: UIViewController {
     @IBOutlet private weak var stackViewTitles: UIStackView!
     @IBOutlet private weak var stackViewZzz: UIStackView!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var plusButton: UIButton!
     var viewModel: MainScreenViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +28,15 @@ class MainScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        if viewModel?.exercises.isEmpty != nil {
-            stackViewZzz.isHidden = true
-        } else {
-            stackViewZzz.isHidden = false
-        }
+        guard let viewModel = viewModel else { return }
+        stackViewZzz.isHidden = !viewModel.exercises.isEmpty
     }
-
     private func tableViewConfig() {
-        let nib = UINib(nibName: "MainScreenHeaderView", bundle: nil)
-        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "MainScreenHeaderView")
+        let nib = UINib(nibName: Identifiers.Headers.mainHeader.rawValue, bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: Identifiers.Headers.mainHeader.rawValue)
+    }
+    @objc private func tapImage() {
+        self.performSegue(withIdentifier: Identifiers.Segues.toCellInformation.rawValue, sender: nil)
     }
     @IBAction private func didTapAddExerciseButton(_ sender: Any) {
         if stackViewButtons.isHidden {
@@ -65,13 +65,11 @@ class MainScreenViewController: UIViewController {
     }
     @IBAction private func unwindSegueToMain(_ sender: UIStoryboardSegue) {
     }
-    @IBAction func didTapSettingsCellButton(_ sender: Any) {
-    }
 }
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MainScreenHeaderView") as? MainScreenHeaderView
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: Identifiers.Headers.mainHeader.rawValue) as? MainHeaderView
         header?.titleLabel.text = viewModel?.getTitleMuscle()
         return header
     }
@@ -79,21 +77,35 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         return viewModel?.numberOfRows() ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell") as? MainScreenTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.mainCell.rawValue) as? MainScreenTableViewCell
         guard let tableViewCell = cell, let viewModel = viewModel else { return UITableViewCell() }
         tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
-        tableViewCell.delegate = self
+        tableViewCell.deletedCell = self
         tableViewCell.indexPath = indexPath
+        tableViewCell.actionHendler = { [weak self] viewController in
+            self?.present(viewController, animated: true)
+        }
+        addImageTapRecognizer(image: tableViewCell.imageViewMain)
         return tableViewCell
+    }
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        return
     }
 }
 
-extension MainScreenViewController: TableViewDeletingCellsType {
+extension MainScreenViewController: TableViewCellSettingsType {
     func delete(forIndexPath indexPath: IndexPath) {
         self.viewModel?.exercises.remove(at: indexPath.row)
-        self.tableView.deleteRows(at: [indexPath], with: .none)
+        self.tableView.deleteRows(at: [indexPath], with: .fade)
         MusclesViewModel.muscleTitle.remove(at: indexPath.row)
-        guard !tableView.visibleCells.isEmpty else { return stackViewZzz.isHidden = false }
+        stackViewZzz.isHidden = !tableView.visibleCells.isEmpty
         tableView.reloadData()
+    }
+    func addImageTapRecognizer(image: UIImageView) {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(tapImage))
+        image.addGestureRecognizer(recognizer)
+        image.isUserInteractionEnabled = true
+        image.backgroundColor = .init(white: 1, alpha: 1)
+        image.layer.cornerRadius = 10
     }
 }

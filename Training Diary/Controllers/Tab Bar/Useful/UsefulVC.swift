@@ -20,12 +20,20 @@ extension UsefulVC: UITableViewDataSource, UITableViewDelegate {
         return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: UsefulTableViewCellIdentifier.identifier.rawValue,
+        var cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.usefulCell.rawValue,
                                                  for: indexPath)
         cell = UsefulTableView.toFillCells(cell: cell, number: indexPath.row)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: Identifiers.Segues.toMuscle.rawValue, sender: nil)
+        default:
+            break
+        }
     }
 }

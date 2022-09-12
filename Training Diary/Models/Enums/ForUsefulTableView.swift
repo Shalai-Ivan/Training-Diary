@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum UsefulTableViewCellIdentifier: String {
-    case identifier = "tableViewCell"
-}
-
 enum UsefulFieldNames: String, CaseIterable {
     case zero = "  Упражнения"
     case one = "  Статистика"
