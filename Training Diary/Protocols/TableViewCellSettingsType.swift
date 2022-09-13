@@ -5,9 +5,9 @@
 //  Created by MacMini on 7.09.22.
 //
 
-import Foundation
 import UIKit
 
-protocol TableViewDeletingCellsType {
+protocol TableViewCellSettingsType {
     func delete(forIndexPath indexPath: IndexPath)
+    func addImageTapRecognizer(image: UIImageView)
 }

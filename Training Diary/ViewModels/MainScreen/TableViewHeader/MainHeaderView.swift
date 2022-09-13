@@ -7,7 +7,6 @@
 
 import UIKit
 
-class MainScreenHeaderView: UITableViewHeaderFooterView {
+class MainHeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var titleLabel: UILabel!
-
 }

@@ -55,7 +55,7 @@ struct SettingsTableView {
         }
     }
     static func toFillCells(tableView: UITableView, row: Int, section: Int) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewIndentifiers.firstCellIdentifier.rawValue)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.settingsCell.rawValue)
         switch section {
         case 0:
             cell?.textLabel?.text = SettingsTableView().arrayMain[row]

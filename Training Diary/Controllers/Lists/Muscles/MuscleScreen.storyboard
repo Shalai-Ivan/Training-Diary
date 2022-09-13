@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XwJ-3u-H19">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XwJ-3u-H19">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Упражнения-->
         <scene sceneID="jZ3-hk-O8Z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ord-tt-0pw" customClass="MusclesViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MuscleScreen" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ord-tt-0pw" customClass="MusclesViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="njQ-Ha-an8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,26 +22,26 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="muscleCell" id="jwH-fT-AiG" customClass="MusclesTableViewCell" customModule="Training_Diary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwH-fT-AiG" id="chf-9R-wRA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTw-gF-xWj">
-                                                    <rect key="frame" x="53.5" y="11" width="42" height="21.5"/>
+                                                    <rect key="frame" x="53" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5r0-Dr-57e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="5r0-Dr-57e" secondAttribute="height" multiplier="1:1" id="9Ud-6Y-Nza"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-tu-ZJ8">
-                                                    <rect key="frame" x="370.5" y="0.0" width="43.5" height="43.5"/>
+                                                    <rect key="frame" x="371" y="0.0" width="43" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Gev-tu-ZJ8" secondAttribute="height" multiplier="1:1" id="EQX-Au-Nij"/>
                                                     </constraints>
@@ -89,12 +90,12 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="didTapBackButton:" destination="ord-tt-0pw" id="UaS-8t-z6g"/>
-                                <segue destination="3dL-z8-ygc" kind="unwind" unwindAction="unwindSegueToMain:" id="Wtm-ZY-0td"/>
+                                <segue destination="3dL-z8-ygc" kind="unwind" identifier="" unwindAction="unwindSegueToMain:" id="Wtm-ZY-0td"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="QUQ-3L-HXs" kind="show" identifier="ToExercisesList" id="Mun-w0-Aqx"/>
+                        <segue destination="QUQ-3L-HXs" kind="show" identifier="toExercises" id="Mun-w0-Aqx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFN-eQ-mCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="2137.68115942029" y="-206.25"/>
         </scene>
-        <!--ExercisesList-->
+        <!--ExercisesScreen-->
         <scene sceneID="nmA-sE-28v">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExercisesList" id="QUQ-3L-HXs" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ExercisesScreen" id="QUQ-3L-HXs" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FG7-Ac-ZYd"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4G-Bs-HfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,7 +116,7 @@
         <!--Navigation Controller-->
         <scene sceneID="TLe-kz-DnX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="XwJ-3u-H19" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MuscleNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XwJ-3u-H19" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="0D7-cl-cxK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
