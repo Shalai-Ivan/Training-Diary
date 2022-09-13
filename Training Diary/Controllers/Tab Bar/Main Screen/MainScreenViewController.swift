@@ -83,13 +83,14 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         tableViewCell.deletedCell = self
         tableViewCell.indexPath = indexPath
         tableViewCell.actionHendler = { [weak self] viewController in
-            self?.present(viewController, animated: true)
+            if let avc = viewController as? ApproachViewController {
+                avc.viewModel.approachNumber += 1
+                avc.mainScreen = self
+                self?.present(avc, animated: true)
+            }
         }
         addImageTapRecognizer(image: tableViewCell.imageViewMain)
         return tableViewCell
-    }
-    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-        return
     }
 }
 
@@ -107,5 +108,16 @@ extension MainScreenViewController: TableViewCellSettingsType {
         image.isUserInteractionEnabled = true
         image.backgroundColor = .init(white: 1, alpha: 1)
         image.layer.cornerRadius = 10
+    }
+}
+
+extension MainScreenViewController: ApproachAddingType {
+    func addApproach() -> ApproachContainer? {
+        let storyboard = UIStoryboard(name: "ApproachContainer", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ApproachContainer") as? ApproachContainer {
+            addChild(viewController)
+            view.addSubview(viewController.view)
+        }
+        return ApproachContainer()
     }
 }

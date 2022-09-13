@@ -95,7 +95,7 @@
                                             <outletCollection property="gestureRecognizers" destination="hvN-E4-3d7" appends="YES" id="KJF-mK-M2h"/>
                                         </connections>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТЯЖЕЛ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UL-cn-zla">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТЯЖЛ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UL-cn-zla">
                                         <rect key="frame" x="93.5" y="0.0" width="38.5" height="18"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -249,7 +249,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="-118.52678571428571"/>
+            <point key="canvasLocation" x="165" y="-118"/>
         </scene>
     </scenes>
     <resources>

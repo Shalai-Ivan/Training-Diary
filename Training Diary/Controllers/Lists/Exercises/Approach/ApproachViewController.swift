@@ -17,7 +17,9 @@ class ApproachViewController: UIViewController {
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var weightStepper: UIStepper!
     @IBOutlet private weak var countStepper: UIStepper!
-    private let viewModel = ApproachViewModel()
+    private var titleColor: UIColor?
+    let viewModel = ApproachViewModel()
+    var mainScreen: ApproachAddingType?
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldConfigurate()
@@ -45,20 +47,30 @@ class ApproachViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction private func didTapAddingButton(_ sender: Any) {
+        if let qqq = Int(weightTextField.text!) {
+            viewModel.approachNumber = qqq
+        } else {
+            print("No text")
+        }
+//        mainScreen?.addApproach()
+        dismiss(animated: true)
     }
     @IBAction private func didTapDeleteButton(_ sender: Any) {
     }
     @IBAction func didTapEasyTitle(_ sender: Any) {
         unHighlightTitles()
         easyTitle = viewModel.toHighlightLabel(label: easyTitle, number: 0)
+        titleColor = easyTitle.backgroundColor
     }
     @IBAction func didTapNormTitle(_ sender: Any) {
         unHighlightTitles()
         normTitle = viewModel.toHighlightLabel(label: normTitle, number: 1)
+        titleColor = normTitle.backgroundColor
     }
     @IBAction func didTapHeavyTitle(_ sender: Any) {
         unHighlightTitles()
         heavyTitle = viewModel.toHighlightLabel(label: heavyTitle, number: 2)
+        titleColor = heavyTitle.backgroundColor
     }
 }
 extension ApproachViewController: UITextFieldDelegate {

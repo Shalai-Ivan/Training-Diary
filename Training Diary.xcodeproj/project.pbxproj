@@ -17,6 +17,9 @@
 		9A5704A728B7F476000947EE /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */; };
 		9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */; };
 		9A944AC928CCDD0300353CFF /* ApproachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A944AC828CCDD0300353CFF /* ApproachViewModel.swift */; };
+		9A97ECB828CF5AE5007C9D33 /* ApproachContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A97ECB728CF5AE5007C9D33 /* ApproachContainer.storyboard */; };
+		9A97ECBA28CF5AF5007C9D33 /* ApproachContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97ECB928CF5AF5007C9D33 /* ApproachContainer.swift */; };
+		9A97ECBC28CF6D85007C9D33 /* ApproachSetupingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97ECBB28CF6D84007C9D33 /* ApproachSetupingType.swift */; };
 		9ADFB55328C384370019E23F /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55228C384370019E23F /* Box.swift */; };
 		9ADFB55728C384670019E23F /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55528C384670019E23F /* MainScreenViewModel.swift */; };
 		9ADFB55828C384670019E23F /* MianScrenViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFB55628C384670019E23F /* MianScrenViewModelCell.swift */; };
@@ -75,6 +78,9 @@
 		9A5704A628B7F476000947EE /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9A944AC828CCDD0300353CFF /* ApproachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachViewModel.swift; sourceTree = "<group>"; };
+		9A97ECB728CF5AE5007C9D33 /* ApproachContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApproachContainer.storyboard; sourceTree = "<group>"; };
+		9A97ECB928CF5AF5007C9D33 /* ApproachContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachContainer.swift; sourceTree = "<group>"; };
+		9A97ECBB28CF6D84007C9D33 /* ApproachSetupingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachSetupingType.swift; sourceTree = "<group>"; };
 		9ADFB55228C384370019E23F /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		9ADFB55528C384670019E23F /* MainScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		9ADFB55628C384670019E23F /* MianScrenViewModelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MianScrenViewModelCell.swift; sourceTree = "<group>"; };
@@ -389,6 +395,7 @@
 				CE410AA928C0792100656BE1 /* ExercisesViewModelType.swift */,
 				CE410AB328C089B400656BE1 /* TableViewDataTransferType.swift */,
 				9A3F1F7628C8DC4300059112 /* TableViewCellSettingsType.swift */,
+				9A97ECBB28CF6D84007C9D33 /* ApproachSetupingType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -497,6 +504,8 @@
 			children = (
 				9A4B05A828CB4FAF004CF782 /* ApproachViewController.swift */,
 				9A4B05AC28CBB57B004CF782 /* ApproachScreen.storyboard */,
+				9A97ECB728CF5AE5007C9D33 /* ApproachContainer.storyboard */,
+				9A97ECB928CF5AF5007C9D33 /* ApproachContainer.swift */,
 			);
 			path = Approach;
 			sourceTree = "<group>";
@@ -571,6 +580,7 @@
 				9A5704A028B7DAD0000947EE /* Assets.xcassets in Resources */,
 				CE40521E28AFA4210052EEAD /* UsefulScreen.storyboard in Resources */,
 				CE56284F28BCBAB00044DA61 /* MuscleScreen.storyboard in Resources */,
+				9A97ECB828CF5AE5007C9D33 /* ApproachContainer.storyboard in Resources */,
 				9A5704A428B7E8CB000947EE /* SettingsHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,6 +657,7 @@
 				9A5704A228B7E870000947EE /* SettingsHeaderView.swift in Sources */,
 				CE3099EE28B764510094BFF6 /* SettingsTableView.swift in Sources */,
 				CE56285528BCBB330044DA61 /* MusclesViewController.swift in Sources */,
+				9A97ECBA28CF5AF5007C9D33 /* ApproachContainer.swift in Sources */,
 				CE56287728BCD8120044DA61 /* TableViewCellViewModelType.swift in Sources */,
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
 				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
@@ -655,6 +666,7 @@
 				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */,
 				9ADFB55A28C3848D0019E23F /* MainScreenTableViewCell.swift in Sources */,
+				9A97ECBC28CF6D85007C9D33 /* ApproachSetupingType.swift in Sources */,
 				9ADFB55328C384370019E23F /* Box.swift in Sources */,
 				CE56287028BCC90A0044DA61 /* Muscle.swift in Sources */,
 				CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */,
