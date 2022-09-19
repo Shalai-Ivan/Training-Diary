@@ -29,20 +29,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byx-UG-TA7">
-                                                    <rect key="frame" x="20" y="11" width="325" height="29.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="11" width="325" height="40.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljt-4o-ewq">
+                                                <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljt-4o-ewq">
                                                     <rect key="frame" x="355" y="10" width="51" height="31.5"/>
+                                                    <connections>
+                                                        <action selector="didTapSwitchAction:" destination="ByH-8c-szW" eventType="valueChanged" id="sPm-LX-vS5"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="byx-UG-TA7" secondAttribute="bottom" id="1aO-YF-Mgw"/>
                                                 <constraint firstItem="byx-UG-TA7" firstAttribute="leading" secondItem="UMk-Sk-CVp" secondAttribute="leadingMargin" id="GWD-d6-hra"/>
+                                                <constraint firstItem="ljt-4o-ewq" firstAttribute="leading" secondItem="byx-UG-TA7" secondAttribute="trailing" constant="10" id="Hmn-xU-Sau"/>
                                                 <constraint firstItem="byx-UG-TA7" firstAttribute="top" secondItem="UMk-Sk-CVp" secondAttribute="topMargin" id="QAU-HS-L9P"/>
-                                                <constraint firstItem="ljt-4o-ewq" firstAttribute="leading" secondItem="byx-UG-TA7" secondAttribute="trailing" constant="10" id="byo-Wi-hWe"/>
+                                                <constraint firstAttribute="bottom" secondItem="byx-UG-TA7" secondAttribute="bottom" id="cg3-C7-zcq"/>
                                                 <constraint firstAttribute="trailing" secondItem="ljt-4o-ewq" secondAttribute="trailing" constant="10" id="dSo-cs-zMw"/>
                                                 <constraint firstAttribute="bottom" secondItem="ljt-4o-ewq" secondAttribute="bottom" constant="10" id="juk-eb-tV9"/>
                                                 <constraint firstItem="ljt-4o-ewq" firstAttribute="top" secondItem="UMk-Sk-CVp" secondAttribute="top" constant="10" id="xmq-vq-3VX"/>
@@ -51,8 +54,7 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="switchButton" destination="ljt-4o-ewq" id="2s1-QO-VJO"/>
-                                            <outlet property="titleLabel" destination="byx-UG-TA7" id="KvY-mY-oFv"/>
+                                            <outlet property="titleLabel" destination="byx-UG-TA7" id="fAS-wo-TxP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -88,6 +90,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingsTableView" destination="kcx-TB-d8o" id="xw0-xu-WdE"/>
+                        <outlet property="tableView" destination="kcx-TB-d8o" id="lT4-cn-dpD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc0-BV-4Z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,11 +9,7 @@ import UIKit
 
 class ApproachViewModel {
     private var titleChosen = -1
-    var approachNumber: Int = 0 {
-        didSet {
-            print("Approach number - \(approachNumber)")
-        }
-    }
+    var approachNumber: Int = 0
     func toHighlightLabel(label: UILabel, number: Int) -> UILabel? {
         if titleChosen != number {
             titleChosen = number

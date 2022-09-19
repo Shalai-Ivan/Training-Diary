@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MusclesViewModel: TableViewViewModelType {
+class MusclesViewModel {
     static var muscleTitle: [String] = []
     static func deleteMuscleTitle() {
         muscleTitle.removeLast()
@@ -46,6 +46,11 @@ class MusclesViewModel: TableViewViewModelType {
             return []
         }
     }
+}
+
+// MARK: - Extensions
+
+extension MusclesViewModel: TableViewViewModelType {
     func numberOfRows() -> Int {
         return muscles.count
     }

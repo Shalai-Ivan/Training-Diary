@@ -6,5 +6,6 @@ target 'Training Diary' do
   use_frameworks!
 
   # Pods for Training Diary
-  pod 'SwiftLint'
+ pod 'SwiftLint'
+ 
 end

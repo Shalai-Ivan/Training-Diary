@@ -22,6 +22,9 @@ class MainScreenViewModel: ExercisesViewModelType {
         return result
     }
 }
+
+// MARK: - Extensions
+
 extension MainScreenViewModel: TableViewViewModelType {
     func numberOfRows() -> Int {
         return exercises.count

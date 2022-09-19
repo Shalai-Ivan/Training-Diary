@@ -15,6 +15,8 @@ class ExercisesViewModel: ExercisesViewModelType {
     }
 }
 
+// MARK: - Extensions
+
 extension ExercisesViewModel: TableViewViewModelType {
     func numberOfRows() -> Int {
         return exercises.count

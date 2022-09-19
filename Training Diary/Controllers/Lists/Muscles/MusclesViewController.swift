@@ -25,7 +25,8 @@ class MusclesViewController: UIViewController {
     @IBAction func didTapBackButton(_ sender: Any) {
     }
 }
-    // MARK: - Table view data source
+
+// MARK: - Extensions
 
 extension MusclesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

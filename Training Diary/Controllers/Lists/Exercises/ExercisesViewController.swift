@@ -42,6 +42,8 @@ class ExercisesViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension ExercisesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return  viewModel?.numberOfRows() ?? 0

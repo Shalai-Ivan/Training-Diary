@@ -15,6 +15,8 @@ class UsefulVC: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension UsefulVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5

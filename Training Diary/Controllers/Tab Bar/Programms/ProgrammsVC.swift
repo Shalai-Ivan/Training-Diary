@@ -20,6 +20,8 @@ class ProgrammsVC: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension ProgrammsVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {

@@ -38,6 +38,7 @@ class MainScreenViewController: UIViewController {
     @objc private func tapImage() {
         self.performSegue(withIdentifier: Identifiers.Segues.toCellInformation.rawValue, sender: nil)
     }
+// MARK: - IBActions
     @IBAction private func didTapAddExerciseButton(_ sender: Any) {
         if stackViewButtons.isHidden {
             UIView.animate(withDuration: 0.5) { [weak self] in
@@ -66,6 +67,8 @@ class MainScreenViewController: UIViewController {
     @IBAction private func unwindSegueToMain(_ sender: UIStoryboardSegue) {
     }
 }
+
+// MARK: - Extensions
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

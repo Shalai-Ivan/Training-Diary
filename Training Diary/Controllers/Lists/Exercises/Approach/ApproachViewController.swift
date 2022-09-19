@@ -5,6 +5,7 @@
 //  Created by MacMini on 9.09.22.
 //
 
+import CoreData
 import UIKit
 
 class ApproachViewController: UIViewController {
@@ -24,6 +25,9 @@ class ApproachViewController: UIViewController {
         super.viewDidLoad()
         textFieldConfigurate()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         preferredContentSize = CGSize(width: 250, height: 250)
@@ -37,6 +41,20 @@ class ApproachViewController: UIViewController {
         normTitle.backgroundColor = .none; normTitle.textColor = .lightGray
         heavyTitle.backgroundColor = .none; heavyTitle.textColor = .lightGray
     }
+    private func getContext() -> NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext() }
+        return appDelegate.persistentContainer.viewContext
+    }
+    private func saveApproach(weight: String?, count: String?, color: UIColor?) {
+        let context = getContext()
+        guard let entity = NSEntityDescription.entity(forEntityName: "Approach", in: context) else { return }
+        let approachObject = Approach(entity: entity, insertInto: context)
+        approachObject.weight = weight ?? "-"
+        approachObject.count = count ?? "-"
+        approachObject.color = color ?? .lightGray
+    }
+// MARK: - @IBActions
     @IBAction private func didTapWeightStepper(_ sender: UIStepper) {
         weightTextField.text = "\(weightStepper.value)"
     }
@@ -53,6 +71,7 @@ class ApproachViewController: UIViewController {
             print("No text")
         }
 //        mainScreen?.addApproach()
+        saveApproach(weight: weightTextField.text, count: countTextField.text, color: titleColor)
         dismiss(animated: true)
     }
     @IBAction private func didTapDeleteButton(_ sender: Any) {
@@ -73,6 +92,9 @@ class ApproachViewController: UIViewController {
         titleColor = heavyTitle.backgroundColor
     }
 }
+
+// MARK: - Extensions
+
 extension ApproachViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         weightTextField.resignFirstResponder()
