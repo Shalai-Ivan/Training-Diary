@@ -7,25 +7,24 @@
 
 import UIKit
 
-class UsefulVC: UIViewController {
+class UsefulViewController: UIViewController {
 
     @IBOutlet private weak var usefulTableView: UITableView!
-    private var viewModel: UsefulViewModel?
+    private var viewModel = UsefulViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = UsefulViewModel()
     }
 }
 
 // MARK: - Extensions
 
-extension UsefulVC: UITableViewDataSource, UITableViewDelegate {
+extension UsefulViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfRows() ?? 0
+        return viewModel.numberOfRows()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.usefulCell.rawValue, for: indexPath)
-        guard let viewModel = viewModel, let tableViewCell = cell as? UsefulTableViewCell else { return UITableViewCell() }
+        guard let tableViewCell = cell as? UsefulTableViewCell else { return UITableViewCell() }
         tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         return tableViewCell
     }

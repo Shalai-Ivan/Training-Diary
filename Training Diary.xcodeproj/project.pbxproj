@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A38D41C28D8B6960065F0E4 /* UsefulTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38D41B28D8B6960065F0E4 /* UsefulTableViewCell.swift */; };
 		9A38D41E28D8BA6B0065F0E4 /* UsefulViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38D41D28D8BA6B0065F0E4 /* UsefulViewModelCell.swift */; };
+		9A38D42028D8C2B50065F0E4 /* ProgrammsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38D41F28D8C2B50065F0E4 /* ProgrammsCollectionViewCell.swift */; };
 		9A3F1F7728C8DC4300059112 /* TableViewCellSettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3F1F7628C8DC4300059112 /* TableViewCellSettingsType.swift */; };
 		9A4B05A928CB4FAF004CF782 /* ApproachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B05A828CB4FAF004CF782 /* ApproachViewController.swift */; };
 		9A4B05AB28CB9E59004CF782 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B05AA28CB9E59004CF782 /* Identifiers.swift */; };
@@ -17,7 +18,7 @@
 		9A5704A228B7E870000947EE /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A128B7E870000947EE /* SettingsHeaderView.swift */; };
 		9A5704A428B7E8CB000947EE /* SettingsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A5704A328B7E8CB000947EE /* SettingsHeaderView.xib */; };
 		9A5704A728B7F476000947EE /* SettingsViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5704A628B7F476000947EE /* SettingsViewModelCell.swift */; };
-		9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */; };
+		9A70787728B53FF2006F5DB5 /* ProgrammsViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70787628B53FF2006F5DB5 /* ProgrammsViewModelCell.swift */; };
 		9A8B990C28D1DB0E00D0BD70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A8B990B28D1DB0E00D0BD70 /* GoogleService-Info.plist */; };
 		9A944AC928CCDD0300353CFF /* ApproachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A944AC828CCDD0300353CFF /* ApproachViewModel.swift */; };
 		9A97ECB828CF5AE5007C9D33 /* ApproachContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A97ECB728CF5AE5007C9D33 /* ApproachContainer.storyboard */; };
@@ -37,9 +38,9 @@
 		CE4051E528AF94050052EEAD /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4051E328AF94050052EEAD /* MainScreen.storyboard */; };
 		CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE4051E628AF94050052EEAD /* Training_Diary.xcdatamodeld */; };
 		CE4051ED28AF94070052EEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4051EB28AF94070052EEAD /* LaunchScreen.storyboard */; };
-		CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520928AF9CE50052EEAD /* UsefulVC.swift */; };
-		CE40520D28AF9CF50052EEAD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520C28AF9CF50052EEAD /* SettingsVC.swift */; };
-		CE40520F28AF9D080052EEAD /* ProgrammsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520E28AF9D080052EEAD /* ProgrammsVC.swift */; };
+		CE40520A28AF9CE50052EEAD /* UsefulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520928AF9CE50052EEAD /* UsefulViewController.swift */; };
+		CE40520D28AF9CF50052EEAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520C28AF9CF50052EEAD /* SettingsViewController.swift */; };
+		CE40520F28AF9D080052EEAD /* ProgrammsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40520E28AF9D080052EEAD /* ProgrammsViewController.swift */; };
 		CE40521328AF9DF10052EEAD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40521228AF9DF10052EEAD /* MainTabBarController.swift */; };
 		CE40521B28AFA3C60052EEAD /* ProgrammsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE40521A28AFA3C60052EEAD /* ProgrammsScreen.storyboard */; };
 		CE40521E28AFA4210052EEAD /* UsefulScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */; };
@@ -61,7 +62,7 @@
 		CE56287E28BCD9110044DA61 /* MusclesViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56287D28BCD9110044DA61 /* MusclesViewModelCell.swift */; };
 		CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */; };
 		CE8A484428B4E6BE00341176 /* UsefulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A484328B4E6BE00341176 /* UsefulViewModel.swift */; };
-		CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */; };
+		CE8C2FF628B4A96700A1AA3E /* ProgrammsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C2FF528B4A96700A1AA3E /* ProgrammsViewModel.swift */; };
 		CEBEC49028C9EC7200DD46D8 /* CellInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBEC48F28C9EC7200DD46D8 /* CellInformationVC.swift */; };
 		CEBEC49528C9EC9100DD46D8 /* CellInformationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBEC49428C9EC9100DD46D8 /* CellInformationScreen.storyboard */; };
 		E8CA2C9344C3EBA526FF5B64 /* Pods_Training_Diary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F59E7BC7F3A44652C91AF14 /* Pods_Training_Diary.framework */; };
@@ -72,6 +73,7 @@
 		8EBC3501A9A7A723C270DDCB /* Pods-Training Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training Diary.debug.xcconfig"; path = "Target Support Files/Pods-Training Diary/Pods-Training Diary.debug.xcconfig"; sourceTree = "<group>"; };
 		9A38D41B28D8B6960065F0E4 /* UsefulTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulTableViewCell.swift; sourceTree = "<group>"; };
 		9A38D41D28D8BA6B0065F0E4 /* UsefulViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulViewModelCell.swift; sourceTree = "<group>"; };
+		9A38D41F28D8C2B50065F0E4 /* ProgrammsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammsCollectionViewCell.swift; sourceTree = "<group>"; };
 		9A3F1F7628C8DC4300059112 /* TableViewCellSettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSettingsType.swift; sourceTree = "<group>"; };
 		9A4B05A828CB4FAF004CF782 /* ApproachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachViewController.swift; sourceTree = "<group>"; };
 		9A4B05AA28CB9E59004CF782 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		9A5704A128B7E870000947EE /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
 		9A5704A328B7E8CB000947EE /* SettingsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsHeaderView.xib; sourceTree = "<group>"; };
 		9A5704A628B7F476000947EE /* SettingsViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelCell.swift; sourceTree = "<group>"; };
-		9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9A70787628B53FF2006F5DB5 /* ProgrammsViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammsViewModelCell.swift; sourceTree = "<group>"; };
 		9A8B990B28D1DB0E00D0BD70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A944AC828CCDD0300353CFF /* ApproachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproachViewModel.swift; sourceTree = "<group>"; };
 		9A97ECB728CF5AE5007C9D33 /* ApproachContainer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ApproachContainer.storyboard; sourceTree = "<group>"; };
@@ -103,9 +105,9 @@
 		CE4051E728AF94050052EEAD /* Training_Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Training_Diary.xcdatamodel; sourceTree = "<group>"; };
 		CE4051EC28AF94070052EEAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4051EE28AF94070052EEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE40520928AF9CE50052EEAD /* UsefulVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulVC.swift; sourceTree = "<group>"; };
-		CE40520C28AF9CF50052EEAD /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		CE40520E28AF9D080052EEAD /* ProgrammsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammsVC.swift; sourceTree = "<group>"; };
+		CE40520928AF9CE50052EEAD /* UsefulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulViewController.swift; sourceTree = "<group>"; };
+		CE40520C28AF9CF50052EEAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE40520E28AF9D080052EEAD /* ProgrammsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammsViewController.swift; sourceTree = "<group>"; };
 		CE40521228AF9DF10052EEAD /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CE40521A28AFA3C60052EEAD /* ProgrammsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProgrammsScreen.storyboard; sourceTree = "<group>"; };
 		CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsefulScreen.storyboard; sourceTree = "<group>"; };
@@ -127,7 +129,7 @@
 		CE56287D28BCD9110044DA61 /* MusclesViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusclesViewModelCell.swift; sourceTree = "<group>"; };
 		CE6A283828B39CB200B5C3BD /* ForCollectionViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForCollectionViewImage.swift; sourceTree = "<group>"; };
 		CE8A484328B4E6BE00341176 /* UsefulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulViewModel.swift; sourceTree = "<group>"; };
-		CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTitles.swift; sourceTree = "<group>"; };
+		CE8C2FF528B4A96700A1AA3E /* ProgrammsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammsViewModel.swift; sourceTree = "<group>"; };
 		CEBEC48F28C9EC7200DD46D8 /* CellInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInformationVC.swift; sourceTree = "<group>"; };
 		CEBEC49428C9EC9100DD46D8 /* CellInformationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CellInformationScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,7 +326,8 @@
 		CE40520628AF9C4A0052EEAD /* Programms */ = {
 			isa = PBXGroup;
 			children = (
-				CE40520E28AF9D080052EEAD /* ProgrammsVC.swift */,
+				CE40520E28AF9D080052EEAD /* ProgrammsViewController.swift */,
+				9A38D41F28D8C2B50065F0E4 /* ProgrammsCollectionViewCell.swift */,
 				CE40521A28AFA3C60052EEAD /* ProgrammsScreen.storyboard */,
 			);
 			path = Programms;
@@ -333,7 +336,7 @@
 		CE40520728AF9C8E0052EEAD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				CE40520C28AF9CF50052EEAD /* SettingsVC.swift */,
+				CE40520C28AF9CF50052EEAD /* SettingsViewController.swift */,
 				9A98B57A28D4E9DD00348105 /* SettingsTableViewCell.swift */,
 				CE40522228AFA45B0052EEAD /* SettingsScreen.storyboard */,
 			);
@@ -343,7 +346,7 @@
 		CE40520828AF9CB90052EEAD /* Useful */ = {
 			isa = PBXGroup;
 			children = (
-				CE40520928AF9CE50052EEAD /* UsefulVC.swift */,
+				CE40520928AF9CE50052EEAD /* UsefulViewController.swift */,
 				9A38D41B28D8B6960065F0E4 /* UsefulTableViewCell.swift */,
 				CE40521D28AFA4210052EEAD /* UsefulScreen.storyboard */,
 			);
@@ -473,8 +476,8 @@
 		CE8A483728B4DC0500341176 /* ProgrammsCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				CE8C2FF528B4A96700A1AA3E /* CollectionViewTitles.swift */,
-				9A70787628B53FF2006F5DB5 /* CollectionViewCell.swift */,
+				CE8C2FF528B4A96700A1AA3E /* ProgrammsViewModel.swift */,
+				9A70787628B53FF2006F5DB5 /* ProgrammsViewModelCell.swift */,
 			);
 			path = ProgrammsCollectionView;
 			sourceTree = "<group>";
@@ -639,10 +642,11 @@
 				CE56286B28BCC4D30044DA61 /* MusclesViewModel.swift in Sources */,
 				9A5704A728B7F476000947EE /* SettingsViewModelCell.swift in Sources */,
 				9A3F1F7728C8DC4300059112 /* TableViewCellSettingsType.swift in Sources */,
-				CE40520F28AF9D080052EEAD /* ProgrammsVC.swift in Sources */,
+				CE40520F28AF9D080052EEAD /* ProgrammsViewController.swift in Sources */,
 				CE56285C28BCBB870044DA61 /* MusclesTableViewCell.swift in Sources */,
 				CE410ABE28C0A89E00656BE1 /* ExercisesViewModelCell.swift in Sources */,
 				CE410ABF28C0A89E00656BE1 /* ExercisesViewModel.swift in Sources */,
+				9A38D42028D8C2B50065F0E4 /* ProgrammsCollectionViewCell.swift in Sources */,
 				9ADFB55728C384670019E23F /* MainScreenViewModel.swift in Sources */,
 				CE56287E28BCD9110044DA61 /* MusclesViewModelCell.swift in Sources */,
 				9A944AC928CCDD0300353CFF /* ApproachViewModel.swift in Sources */,
@@ -659,23 +663,23 @@
 				9A97ECBA28CF5AF5007C9D33 /* ApproachContainer.swift in Sources */,
 				CE56287728BCD8120044DA61 /* TableViewCellViewModelType.swift in Sources */,
 				CE4051E828AF94050052EEAD /* Training_Diary.xcdatamodeld in Sources */,
-				CE40520A28AF9CE50052EEAD /* UsefulVC.swift in Sources */,
+				CE40520A28AF9CE50052EEAD /* UsefulViewController.swift in Sources */,
 				9A38D41E28D8BA6B0065F0E4 /* UsefulViewModelCell.swift in Sources */,
-				9A70787728B53FF2006F5DB5 /* CollectionViewCell.swift in Sources */,
+				9A70787728B53FF2006F5DB5 /* ProgrammsViewModelCell.swift in Sources */,
 				CE6A283928B39CB200B5C3BD /* ForCollectionViewImage.swift in Sources */,
 				CE410AAA28C0792100656BE1 /* ExercisesViewModelType.swift in Sources */,
 				9ADFB55A28C3848D0019E23F /* MainScreenTableViewCell.swift in Sources */,
 				9A97ECBC28CF6D85007C9D33 /* ApproachSetupingType.swift in Sources */,
 				9ADFB55328C384370019E23F /* Box.swift in Sources */,
 				CE56287028BCC90A0044DA61 /* Muscle.swift in Sources */,
-				CE8C2FF628B4A96700A1AA3E /* CollectionViewTitles.swift in Sources */,
+				CE8C2FF628B4A96700A1AA3E /* ProgrammsViewModel.swift in Sources */,
 				9A4B05A928CB4FAF004CF782 /* ApproachViewController.swift in Sources */,
 				9A38D41C28D8B6960065F0E4 /* UsefulTableViewCell.swift in Sources */,
 				CEBEC49028C9EC7200DD46D8 /* CellInformationVC.swift in Sources */,
 				9ADFB55828C384670019E23F /* MianScrenViewModelCell.swift in Sources */,
 				9A98B57B28D4E9DD00348105 /* SettingsTableViewCell.swift in Sources */,
 				CE410AB428C089B400656BE1 /* TableViewDataTransferType.swift in Sources */,
-				CE40520D28AF9CF50052EEAD /* SettingsVC.swift in Sources */,
+				CE40520D28AF9CF50052EEAD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

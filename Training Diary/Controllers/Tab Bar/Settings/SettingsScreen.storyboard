@@ -11,7 +11,7 @@
         <!--Настройки-->
         <scene sceneID="9LK-iM-NPa">
             <objects>
-                <viewController storyboardIdentifier="SettingsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i9X-GT-KNg" customClass="SettingsVC" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i9X-GT-KNg" customClass="SettingsViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WLY-9u-N1c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

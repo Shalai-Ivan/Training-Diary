@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SettingsViewModel {
+class SettingsViewModel {
     private var fieldsValues = [("Главное", ["Меры веса и расстояния",
                                      "Первый день недели",
                                      "Сортировка упражнений"]),
@@ -20,19 +20,6 @@ struct SettingsViewModel {
                                      "Экспорт данных",
                                      "Сообщить о проблеме"])]
     var section: Int?
-
-    private func toCountRowsInSection(section: Int?) -> Int {
-        switch section {
-        case 0:
-            return fieldsValues[0].1.count
-        case 1:
-            return fieldsValues[1].1.count
-        case 2:
-            return fieldsValues[2].1.count
-        default:
-            return 0
-        }
-    }
     func toSetSectionTitle(section: Int) -> String {
         switch section {
         case 0:
@@ -63,7 +50,16 @@ struct SettingsViewModel {
 
 extension SettingsViewModel: TableViewViewModelType {
     func numberOfRows() -> Int {
-        return toCountRowsInSection(section: section)
+        switch section {
+        case 0:
+            return fieldsValues[0].1.count
+        case 1:
+            return fieldsValues[1].1.count
+        case 2:
+            return fieldsValues[2].1.count
+        default:
+            return 0
+        }
     }
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType {
         let text = toSetCellValues(indexPath: indexPath)

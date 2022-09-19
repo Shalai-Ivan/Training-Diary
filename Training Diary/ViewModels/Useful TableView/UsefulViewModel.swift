@@ -8,7 +8,6 @@
 import UIKit
 
 class UsefulViewModel {
-    
     private var arrayFieldName = [Muscle(image: UIImage(named: "dumbbell")!, text: "  Упражнения"),
                                   Muscle(image: UIImage(named: "increase")!, text: "  Статистика"),
                                   Muscle(image: UIImage(named: "calculator")!, text: "  Калькулятор"),

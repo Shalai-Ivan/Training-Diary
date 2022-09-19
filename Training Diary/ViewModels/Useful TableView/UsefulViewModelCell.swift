@@ -8,7 +8,6 @@
 import UIKit
 
 class UsefulViewModelCell: TableViewCellViewModelType {
-    
     private var field: Muscle
     var image: UIImage {
         return field.image

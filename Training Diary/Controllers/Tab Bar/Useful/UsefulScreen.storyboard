@@ -11,7 +11,7 @@
         <!--Полезное-->
         <scene sceneID="bE8-hZ-TkV">
             <objects>
-                <viewController storyboardIdentifier="usefulScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uyn-gn-t4n" customClass="UsefulVC" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="usefulScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uyn-gn-t4n" customClass="UsefulViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RPr-yh-FG9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

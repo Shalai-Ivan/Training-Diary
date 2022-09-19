@@ -7,37 +7,32 @@
 
 import UIKit
 
-class ProgrammsVC: UIViewController {
+class ProgrammsViewController: UIViewController {
 
     @IBOutlet private weak var collectionImageView: UICollectionView!
-    var images: [UIImage] {
-        Array(0...9).compactMap { (UIImage(named: "item\($0)")) }
-    }
+    private var viewModel = ProgrammsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionImageView.dataSource = self
-        collectionImageView.delegate = self
     }
 }
 
 // MARK: - Extensions
 
-extension ProgrammsVC: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        images.count
+extension ProgrammsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfRows()
     }
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard var cell = collectionImageView.dequeueReusableCell(withReuseIdentifier: Identifiers.TableViewCells.programmsViewCell.rawValue,
-                                                                 for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
-        cell.imageViewCell.image = images[indexPath.row]
-        cell = CollectionViewTitles.toFillCells(cell: cell, number: indexPath.row)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionImageView.dequeueReusableCell(withReuseIdentifier: Identifiers.TableViewCells.programmsViewCell.rawValue,
+                                                           for: indexPath)
+        guard let cell = cell as? ProgrammsCollectionViewCell else { return UICollectionViewCell() }
+        cell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath) as? ProgrammsViewModelCell
+        cell.bottomTitleLabel.alpha = 0.6
         return cell
     }
 }
 
-extension ProgrammsVC: UICollectionViewDelegateFlowLayout {
+extension ProgrammsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

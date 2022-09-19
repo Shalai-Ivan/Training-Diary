@@ -12,7 +12,7 @@
         <!--Программы-->
         <scene sceneID="dcg-cg-625">
             <objects>
-                <viewController storyboardIdentifier="ProgrammsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4T-H2-GXi" customClass="ProgrammsVC" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProgrammsScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4T-H2-GXi" customClass="ProgrammsViewController" customModule="Training_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Liv-lh-jBF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="programmsViewCell" id="eSD-mT-vIn" customClass="CollectionViewCell" customModule="Training_Diary" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="programmsViewCell" id="eSD-mT-vIn" customClass="ProgrammsCollectionViewCell" customModule="Training_Diary" customModuleProvider="target">
                                         <rect key="frame" x="53.5" y="0.0" width="307" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HPd-gp-WS1">
@@ -58,19 +58,25 @@
                                                     <color key="textColor" red="0.87668543781725883" green="0.87668543781725883" blue="0.87668543781725883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swq-a8-t79">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swq-a8-t79">
                                                     <rect key="frame" x="266.5" y="275" width="35.5" height="17"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
                                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                 <font key="NSFont" metaFont="system" size="14"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -86,13 +92,22 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="307" height="297"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="bottomTitleLabel" destination="swq-a8-t79" id="ykv-3x-ApM"/>
-                                            <outlet property="imageViewCell" destination="bwo-Qc-c5b" id="LkC-9i-jP4"/>
-                                            <outlet property="topTitleLabel" destination="TlW-fO-P1i" id="R6n-ns-Gch"/>
+                                            <outlet property="bottomTitleLabel" destination="swq-a8-t79" id="EFw-xx-My2"/>
+                                            <outlet property="imageViewProgramms" destination="bwo-Qc-c5b" id="Q6Q-fB-dqp"/>
+                                            <outlet property="topTitleLabel" destination="TlW-fO-P1i" id="bMl-HO-sir"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="V4T-H2-GXi" id="vH9-Nv-jnN"/>
+                                    <outlet property="delegate" destination="V4T-H2-GXi" id="Arf-6G-7D3"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fhk-YW-G2M"/>
