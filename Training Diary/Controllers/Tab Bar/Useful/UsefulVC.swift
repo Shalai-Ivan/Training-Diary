@@ -10,8 +10,10 @@ import UIKit
 class UsefulVC: UIViewController {
 
     @IBOutlet private weak var usefulTableView: UITableView!
+    private var viewModel: UsefulViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = UsefulViewModel()
     }
 }
 
@@ -19,16 +21,16 @@ class UsefulVC: UIViewController {
 
 extension UsefulVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel?.numberOfRows() ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.usefulCell.rawValue,
-                                                 for: indexPath)
-        cell = UsefulTableView.toFillCells(cell: cell, number: indexPath.row)
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.TableViewCells.usefulCell.rawValue, for: indexPath)
+        guard let viewModel = viewModel, let tableViewCell = cell as? UsefulTableViewCell else { return UITableViewCell() }
+        tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        return tableViewCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return self.view.frame.height / 15
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {

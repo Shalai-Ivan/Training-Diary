@@ -7,26 +7,21 @@
 
 import UIKit
 
-struct UsefulTableView {
-    private var arrayFieldName: [String] {
-        var array = [String]()
-        for item in UsefulFieldNames.allCases {
-            array.append(item.rawValue)
-        }
-        return array
+class UsefulViewModel {
+    
+    private var arrayFieldName = [Muscle(image: UIImage(named: "dumbbell")!, text: "  Упражнения"),
+                                  Muscle(image: UIImage(named: "increase")!, text: "  Статистика"),
+                                  Muscle(image: UIImage(named: "calculator")!, text: "  Калькулятор"),
+                                  Muscle(image: UIImage(named: "tape")!, text: "  Замеры"),
+                                  Muscle(image: UIImage(named: "notepad")!, text: "  Блокнот")]
+}
+
+extension UsefulViewModel: TableViewViewModelType {
+    func numberOfRows() -> Int {
+        return arrayFieldName.count
     }
-    private var arrayImages: [UIImage?] {
-        var array = [UIImage?]()
-        for item in UsefulFieldImages.allCases {
-            array.append(UIImage(named: item.rawValue))
-        }
-        return array
-    }
-    static func toFillCells(cell: UITableViewCell, number: Int) -> UITableViewCell {
-        cell.textLabel?.text = UsefulTableView().arrayFieldName[number]
-        cell.imageView?.image = UsefulTableView().arrayImages[number]
-        cell.textLabel?.textColor = .white
-        cell.textLabel?.font = .systemFont(ofSize: 20)
-        return cell
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType {
+        let field = arrayFieldName[indexPath.row]
+        return UsefulViewModelCell(field: field)
     }
 }
