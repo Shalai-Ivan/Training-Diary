@@ -8,7 +8,6 @@
 import UIKit
 
 class UsefulTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var titleLabelUseful: UILabel!
     @IBOutlet weak var imageViewUseful: UIImageView!
     weak var viewModel: TableViewCellViewModelType? {

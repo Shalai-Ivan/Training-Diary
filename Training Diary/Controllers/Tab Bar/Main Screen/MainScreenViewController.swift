@@ -38,6 +38,13 @@ class MainScreenViewController: UIViewController {
     @objc private func tapImage() {
         self.performSegue(withIdentifier: Identifiers.Segues.toCellInformation.rawValue, sender: nil)
     }
+    private func addApproach() {
+        let storyboard = UIStoryboard(name: "ApproachContainer", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ApproachContainer") as? ApproachContainer {
+            addChild(viewController)
+            view.addSubview(viewController.view)
+        }
+    }
 // MARK: - IBActions
     @IBAction private func didTapAddExerciseButton(_ sender: Any) {
         if stackViewButtons.isHidden {
@@ -68,7 +75,7 @@ class MainScreenViewController: UIViewController {
     }
 }
 
-// MARK: - Extensions
+// MARK: - Extensions UITableView
 
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -85,10 +92,10 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         tableViewCell.viewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         tableViewCell.deletedCell = self
         tableViewCell.indexPath = indexPath
-        tableViewCell.actionHendler = { [weak self] viewController in
+        tableViewCell.actionHandler = { [weak self] viewController in
             if let avc = viewController as? ApproachViewController {
                 avc.viewModel.approachNumber += 1
-                avc.mainScreen = self
+                avc.cell = tableViewCell
                 self?.present(avc, animated: true)
             }
         }
@@ -111,16 +118,5 @@ extension MainScreenViewController: TableViewCellSettingsType {
         image.isUserInteractionEnabled = true
         image.backgroundColor = .init(white: 1, alpha: 1)
         image.layer.cornerRadius = 10
-    }
-}
-
-extension MainScreenViewController: ApproachAddingType {
-    func addApproach() -> ApproachContainer? {
-        let storyboard = UIStoryboard(name: "ApproachContainer", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "ApproachContainer") as? ApproachContainer {
-            addChild(viewController)
-            view.addSubview(viewController.view)
-        }
-        return ApproachContainer()
     }
 }

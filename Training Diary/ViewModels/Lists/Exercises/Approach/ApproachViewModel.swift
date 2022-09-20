@@ -5,6 +5,7 @@
 //  Created by MacMini on 10.09.22.
 //
 
+import CoreData
 import UIKit
 
 class ApproachViewModel {
@@ -33,5 +34,18 @@ class ApproachViewModel {
             titleChosen = -1
             return label
         }
+    }
+    private func getContext() -> NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext() }
+        return appDelegate.persistentContainer.viewContext
+    }
+    func saveApproach(weight: String?, count: String?, color: UIColor?) {
+        let context = getContext()
+        guard let entity = NSEntityDescription.entity(forEntityName: "Approach", in: context) else { return }
+        let approachObject = Approach(entity: entity, insertInto: context)
+        approachObject.weight = weight ?? "-"
+        approachObject.count = count ?? "-"
+        approachObject.color = color ?? .lightGray
     }
 }

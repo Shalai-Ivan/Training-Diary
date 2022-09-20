@@ -8,5 +8,5 @@
 import UIKit
 
 protocol ApproachAddingType {
-    func addApproach() -> ApproachContainer?
+    func addApproach()
 }

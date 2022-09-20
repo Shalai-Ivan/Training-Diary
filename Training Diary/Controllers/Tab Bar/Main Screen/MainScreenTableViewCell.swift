@@ -20,7 +20,7 @@ class MainScreenTableViewCell: UITableViewCell {
     }
     var deletedCell: TableViewCellSettingsType?
     var indexPath: IndexPath?
-    var actionHendler: ((UIViewController) -> Void)?
+    var actionHandler: ((UIViewController) -> Void)?
     @IBAction private func didTapPlusButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: Identifiers.Screens.approachScreen.rawValue, bundle: nil)
         let approachVC = storyboard.instantiateViewController(withIdentifier: Identifiers.Screens.approachScreen.rawValue) as? ApproachViewController
@@ -30,11 +30,11 @@ class MainScreenTableViewCell: UITableViewCell {
         avc.sourceView = plusButton
         avc.permittedArrowDirections = [.left, .right, .down]
         avc.sourceRect = CGRect(x: 20,
-                                 y: 10,
-                                 width: 0,
-                                 height: 0)
+                                y: 10,
+                                width: 0,
+                                height: 0)
         approach.preferredContentSize = CGSize(width: 250, height: 250)
-        actionHendler?(approach)
+        actionHandler?(approach)
     }
     @IBAction private func didTapDeleteButton(_ sender: UIButton) {
         guard let indexPath = indexPath else { return }
@@ -45,5 +45,18 @@ class MainScreenTableViewCell: UITableViewCell {
 extension MainScreenTableViewCell: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         .none
+    }
+}
+
+extension MainScreenTableViewCell: ApproachAddingType {
+    func addApproach() {
+        let approachContainer = ApproachContainer()
+        self.addSubview(approachContainer.view)
+        approachContainer.view.backgroundColor = .lightGray
+//        approachContainer.weightlabel.text = "300"
+//        approachContainer.countLabel.text = "20"
+//        approachContainer.imageColor.backgroundColor = UIColor.red
+        approachContainer.view.frame = plusButton.frame
+        plusButton.frame.origin.x += plusButton.frame.width
     }
 }

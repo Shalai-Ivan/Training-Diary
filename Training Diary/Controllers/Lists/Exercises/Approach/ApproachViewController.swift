@@ -5,7 +5,6 @@
 //  Created by MacMini on 9.09.22.
 //
 
-import CoreData
 import UIKit
 
 class ApproachViewController: UIViewController {
@@ -20,10 +19,9 @@ class ApproachViewController: UIViewController {
     @IBOutlet private weak var countStepper: UIStepper!
     private var titleColor: UIColor?
     let viewModel = ApproachViewModel()
-    var mainScreen: ApproachAddingType?
+    var cell: ApproachAddingType?
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldConfigurate()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,37 +39,22 @@ class ApproachViewController: UIViewController {
         normTitle.backgroundColor = .none; normTitle.textColor = .lightGray
         heavyTitle.backgroundColor = .none; heavyTitle.textColor = .lightGray
     }
-    private func getContext() -> NSManagedObjectContext {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return NSManagedObjectContext() }
-        return appDelegate.persistentContainer.viewContext
-    }
-    private func saveApproach(weight: String?, count: String?, color: UIColor?) {
-        let context = getContext()
-        guard let entity = NSEntityDescription.entity(forEntityName: "Approach", in: context) else { return }
-        let approachObject = Approach(entity: entity, insertInto: context)
-        approachObject.weight = weight ?? "-"
-        approachObject.count = count ?? "-"
-        approachObject.color = color ?? .lightGray
-    }
 // MARK: - @IBActions
     @IBAction private func didTapWeightStepper(_ sender: UIStepper) {
-        weightTextField.text = "\(weightStepper.value)"
+        weightTextField.text = Double(sender.value).description
     }
     @IBAction private func didTapCountStepper(_ sender: UIStepper) {
-        countTextField.text = "\(Int(countStepper.value))"
+        countTextField.text = Int(sender.value).description
     }
     @IBAction private func didTapCancelButton(_ sender: Any) {
         dismiss(animated: true)
     }
     @IBAction private func didTapAddingButton(_ sender: Any) {
-        if let qqq = Int(weightTextField.text!) {
-            viewModel.approachNumber = qqq
-        } else {
-            print("No text")
+        if let qqq = Double(weightTextField.text!) {
+            viewModel.approachNumber = Int(qqq)
         }
-//        mainScreen?.addApproach()
-        saveApproach(weight: weightTextField.text, count: countTextField.text, color: titleColor)
+        cell?.addApproach()
+        viewModel.saveApproach(weight: weightTextField.text ?? "-", count: countTextField.text ?? "-", color: titleColor ?? .lightGray)
         dismiss(animated: true)
     }
     @IBAction private func didTapDeleteButton(_ sender: Any) {
@@ -93,7 +76,7 @@ class ApproachViewController: UIViewController {
     }
 }
 
-// MARK: - Extensions
+// MARK: - UITextFieldDelegate
 
 extension ApproachViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -105,5 +88,9 @@ extension ApproachViewController: UITextFieldDelegate {
         let allowedCharacters = CharacterSet(charactersIn: "1234567890")
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        weightStepper.value = Double(weightTextField.text!) ?? -1
+        countStepper.value = Double(countTextField.text!) ?? -1
     }
 }
