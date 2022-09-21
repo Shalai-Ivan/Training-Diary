@@ -31,19 +31,15 @@ class MainScreenViewController: UIViewController {
         guard let viewModel = viewModel else { return }
         stackViewZzz.isHidden = !viewModel.exercises.isEmpty
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
     private func tableViewConfig() {
         let nib = UINib(nibName: Identifiers.Headers.mainHeader.rawValue, bundle: nil)
         tableView.register(nib, forHeaderFooterViewReuseIdentifier: Identifiers.Headers.mainHeader.rawValue)
     }
     @objc private func tapImage() {
         self.performSegue(withIdentifier: Identifiers.Segues.toCellInformation.rawValue, sender: nil)
-    }
-    private func addApproach() {
-        let storyboard = UIStoryboard(name: "ApproachContainer", bundle: nil)
-        if let viewController = storyboard.instantiateViewController(withIdentifier: "ApproachContainer") as? ApproachContainer {
-            addChild(viewController)
-            view.addSubview(viewController.view)
-        }
     }
 // MARK: - IBActions
     @IBAction private func didTapAddExerciseButton(_ sender: Any) {
@@ -94,13 +90,16 @@ extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {
         tableViewCell.indexPath = indexPath
         tableViewCell.actionHandler = { [weak self] viewController in
             if let avc = viewController as? ApproachViewController {
-                avc.viewModel.approachNumber += 1
+                avc.viewModel.approachNumber = tableViewCell.approachNumber
                 avc.cell = tableViewCell
                 self?.present(avc, animated: true)
             }
         }
         addImageTapRecognizer(image: tableViewCell.imageViewMain)
         return tableViewCell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.frame.height / 10
     }
 }
 

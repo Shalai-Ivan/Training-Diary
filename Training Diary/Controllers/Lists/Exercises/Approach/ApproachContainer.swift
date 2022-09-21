@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ApproachContainer: ApproachViewController {
+class ApproachContainer: UIViewController {
 
     @IBOutlet weak var imageColor: UIImageView!
     @IBOutlet weak var weightlabel: UILabel!

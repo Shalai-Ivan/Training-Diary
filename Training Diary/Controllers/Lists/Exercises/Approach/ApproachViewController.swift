@@ -17,7 +17,6 @@ class ApproachViewController: UIViewController {
     @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var weightStepper: UIStepper!
     @IBOutlet private weak var countStepper: UIStepper!
-    private var titleColor: UIColor?
     let viewModel = ApproachViewModel()
     var cell: ApproachAddingType?
     override func viewDidLoad() {
@@ -50,11 +49,8 @@ class ApproachViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction private func didTapAddingButton(_ sender: Any) {
-        if let qqq = Double(weightTextField.text!) {
-            viewModel.approachNumber = Int(qqq)
-        }
         cell?.addApproach()
-        viewModel.saveApproach(weight: weightTextField.text ?? "-", count: countTextField.text ?? "-", color: titleColor ?? .lightGray)
+        viewModel.saveApproach(weight: weightTextField.text ?? "-", count: countTextField.text ?? "-", color: viewModel.titleColor ?? .lightGray)
         dismiss(animated: true)
     }
     @IBAction private func didTapDeleteButton(_ sender: Any) {
@@ -62,17 +58,17 @@ class ApproachViewController: UIViewController {
     @IBAction func didTapEasyTitle(_ sender: Any) {
         unHighlightTitles()
         easyTitle = viewModel.toHighlightLabel(label: easyTitle, number: 0)
-        titleColor = easyTitle.backgroundColor
+        viewModel.titleColor = easyTitle.backgroundColor
     }
     @IBAction func didTapNormTitle(_ sender: Any) {
         unHighlightTitles()
         normTitle = viewModel.toHighlightLabel(label: normTitle, number: 1)
-        titleColor = normTitle.backgroundColor
+        viewModel.titleColor = normTitle.backgroundColor
     }
     @IBAction func didTapHeavyTitle(_ sender: Any) {
         unHighlightTitles()
         heavyTitle = viewModel.toHighlightLabel(label: heavyTitle, number: 2)
-        titleColor = heavyTitle.backgroundColor
+        viewModel.titleColor = heavyTitle.backgroundColor
     }
 }
 

@@ -10,7 +10,8 @@ import UIKit
 
 class ApproachViewModel {
     private var titleChosen = -1
-    var approachNumber: Int = 0
+    var approachNumber: Int?
+    var titleColor: UIColor?
     func toHighlightLabel(label: UILabel, number: Int) -> UILabel? {
         if titleChosen != number {
             titleChosen = number
