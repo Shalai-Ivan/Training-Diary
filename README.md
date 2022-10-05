@@ -1,5 +1,6 @@
 # Training-Diary
-<<<<<<< HEAD
-=======
+
 Pattern - MVVM
->>>>>>> 35f65e4a1c7427719ece4e3868cde0e7855f881c
+
+[https://user-images.githubusercontent.com/103181230/194103209-a1328769-3392-4135-a84d-7930680e5566.mp4]
+
