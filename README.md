@@ -2,5 +2,5 @@
 
 Pattern - MVVM
 
-[![Watch the video](https://user-images.githubusercontent.com/103181230/194103209-a1328769-3392-4135-a84d-7930680e5566.mp4)]
+![Simulator Screen Recording - iPhone 11 - 2022-10-05 at 18 48 47](https://user-images.githubusercontent.com/103181230/194104669-74f98df4-7c87-4f4b-b31b-32b5b78a4559.gif)
 
